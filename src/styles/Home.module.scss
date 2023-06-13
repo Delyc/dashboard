@@ -127,3 +127,24 @@ $cyan: #39CDCC;
   font-size: 12px;
   line-height: 16px;
 }
+
+.login__show {
+  position: relative;
+}
+
+.login__input_showPassword {
+  width: 25.625rem;
+}
+
+.login__showPassword {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #39CDCC;
+}

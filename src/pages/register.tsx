@@ -7,15 +7,31 @@ import logo from '../../public/assets/logo.svg'
 import { useState } from 'react'
 import axios from 'axios'
 
-interface LoginPayload {
+interface RegisterPayload {
+    organisationName: string,
+    phone: string,
+    status: string,
+    dateJoined: string,
     email: string,
     password: string,
+    username: string
 }
 
 
 export default function Home() {
 
-
+    const [organisationName, setOrganisationName] = useState("")
+    const onChangeOrganiationName = (e: any) => {
+        setOrganisationName(e.target.value)
+    }
+    const [phone, setPhone] = useState("")
+    const onChangePhone = (e: any) => {
+        setPhone(e.target.value)
+    }
+    const [status, setStatus] = useState()
+    const onchangeStatus = (e: any) => {
+        setStatus(e.target.value)
+    }
     const [email, setEmail] = useState("")
     const onchangeEmail = (e: any) => {
         setEmail(e.target.value)
@@ -25,17 +41,26 @@ export default function Home() {
         setPassword(e.target.value)
     }
 
+    const [username, setUsername] = useState("")
+    const onChangeUsername = (e: any) => {
+        setUsername(e.target.value)
+    }
 
 
- 
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleString('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true,
+      });
 
 
-    const loginUser = async (data: LoginPayload) => {
+    const createUser = async (data: RegisterPayload) => {
         try {
-            const res = await axios.post("http://localhost:4000/login", data);
-            console.log(res.data.user)
-            localStorage.setItem("user", JSON.stringify(res.data.user));
-            localStorage.setItem("token", res.data.accessToken);
+            const res = axios.post("http://localhost:4000/users", data);
         } catch (error) {
             console.error(error);
         }
@@ -43,13 +68,22 @@ export default function Home() {
 
     const onSubmit = (e: any) => {
         setEmail("");
+        setOrganisationName("");
         setPassword("");
+        setPhone("");
+        setUsername("")
         e.preventDefault();
-        const loginData = {
+        const regData = {
+            organisationName: organisationName,
+            phone: phone,
+            status: 'active',
             email: email,
+            username: username,
             password: password,
+            dateJoined: formattedDate
         };
-        loginUser(loginData);
+        createUser(regData);
+        console.log(regData)
 
     };
     return (
@@ -68,6 +102,9 @@ export default function Home() {
                             <p className={styles.login__description}>Enter details to login.</p>
                         </div>
                         <form className={`${styles.login__form}`}>
+                            <Input className={styles.login__input} placeholder='Organisation name' name={organisationName} value={organisationName} onChange={onChangeOrganiationName} />
+                            <Input className={styles.login__input} placeholder='phone' name={phone} value={phone} onChange={onChangePhone} />
+                            <Input className={styles.login__input} placeholder='username' name={username} value={username} onChange={onChangeUsername} />
                             <Input className={styles.login__input} placeholder='Email' name={email} value={email} onChange={onchangeEmail} />
                             <div className={styles.login__show}>
                                 <Input className={`${styles.login__input} ${styles.login__input_showPassword}`} placeholder='Password' name={password} value={password} onChange={onchangePassword} />
