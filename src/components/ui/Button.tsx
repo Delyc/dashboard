@@ -2,13 +2,14 @@ interface Props{
     text?: any,
     className: any,
     icon?: any,
-    hasIcon ?: boolean
+    hasIcon ?: boolean,
+    onClick ?: any
 
 }
 import styles from '../../styles/Home.module.scss'
-const Button = ({text, className, icon, hasIcon} : Props) => {
+const Button = ({text, className, icon, onClick} : Props) => {
     return ( 
-        <button className={className}>{text} {icon}</button>
+        <button onClick={onClick} className={className}>{text} {icon}</button>
      );
 }
 export default Button;

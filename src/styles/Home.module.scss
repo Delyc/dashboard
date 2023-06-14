@@ -1,4 +1,9 @@
 @import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+
+$font-family-primary: 'Work Sans', sans-serif;
+
 
 $text-color: #545F7D;
 $dark-blue: #213F7D;
@@ -168,6 +173,7 @@ $cyan: #39CDCC;
 
 .dashboard {
   background-color: $background;
+  font-family: $font-family-primary;
 }
 
 .nav {
@@ -198,6 +204,7 @@ $cyan: #39CDCC;
   gap: 30px;
   background-color: white;
   width: 15%;
+  font-family: $font-family-primary;
 }
 
 .sidebar_section {
@@ -239,6 +246,7 @@ $cyan: #39CDCC;
   padding: 60px;
   margin-top: 100px;
   width: 80%;
+  font-family: $font-family-primary;
 }
 
 .users__title {
@@ -324,6 +332,7 @@ border-radius: 4px;
 font-size: 12px;
 line-height: 14px;
 text-transform: uppercase;
+
 
 color: $text-color;
 }

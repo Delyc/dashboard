@@ -3,6 +3,7 @@ import axios from "axios";
 import User from "@/components/cards/User";
 import { Filter } from "../ui/Svgs";
 import styles from'../../styles/Home.module.scss'
+import Button from "../ui/Button";
 
 const UsersTable = () => {
     const [users, setUsers] = useState([])
@@ -19,6 +20,10 @@ const UsersTable = () => {
         getUsers();
     }, []);
 
+    const handleFilter = () => {
+        console.log("clicked")
+    }
+
 
     const tableItem = ["Organiation name", "username", "Email", "DAte Joined", "Status"]
 
@@ -29,7 +34,9 @@ const UsersTable = () => {
             <tr className={styles.table__row}>
                 {tableItem.map((item: string, index: number) => {
                     return(
-                        <th className={styles.table__header} key={index}>{item} {<Filter />}</th>
+                        <th className={styles.table__header} key={index}>{item} 
+    
+                        <Button onClick={handleFilter} icon={<Filter />} className={""} /></th>
                     )
                 })}
 
