@@ -9,7 +9,7 @@ const Users = () => {
     useEffect(() => {
         const getUsers = async () => {
             try {
-                const res = await axios.get("http://localhost:4000/users");
+                const res = await axios.get("http://localhost:4000/users/");
                 setUsers(res.data);
                 console.log(res.data)
             } catch (error) {
@@ -41,7 +41,7 @@ const Users = () => {
 
                     {users.map((user: any, index: any) => {
                         return (
-                   <User  key={index} user={user}/>
+                             <User  key={index} user={user}/>
                         )
                     })}
 

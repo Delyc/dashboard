@@ -34,7 +34,7 @@ export default function Home() {
         try {
             const res = await axios.post("http://localhost:4000/login", data);
             console.log(res.data.user)
-            localStorage.setItem("user", JSON.stringify(res.data.user));
+            localStorage.setItem("user", JSON.stringify(res.data.user.email));
             localStorage.setItem("token", res.data.accessToken);
         } catch (error) {
             console.error(error);
@@ -75,8 +75,8 @@ export default function Home() {
 
                             </div>
                             <p className={styles.login__forgotPassword}>Forgot PASSWORD?</p>
-                            {/* <Button text="log in" className={styles.login__button} />
-                             */}
+                            <Button text="log in" className={styles.login__button} />
+                            
 
                             <button onClick={(e) => onSubmit(e)} type="submit">
                                 Submit

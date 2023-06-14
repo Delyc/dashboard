@@ -2,7 +2,7 @@
 
 $text-color: #545F7D;
 $dark-blue: #213F7D;
-$background: #E5E5E5;
+$background: #FBFBFB;
 $purple: #DF18FF;
 $light-blue: #5718FF;
 $orange: #F55F44;
@@ -12,7 +12,7 @@ $yellow: #E9B200;
 $lime: #39CD62;
 $cyan: #39CDCC;
 
-%button-shared {
+%button_shared {
   padding: 14px 0;
   font-size: 14px;
   font-weight: 600;
@@ -31,7 +31,7 @@ $cyan: #39CDCC;
 }
 
 .button {
-  @extend %button-shared;
+  @extend %button_shared;
   background-color: $cyan;
   border: none;
   color: white;
@@ -147,4 +147,41 @@ $cyan: #39CDCC;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #39CDCC;
+}
+
+
+
+
+
+
+
+//dashboard
+
+
+.dashboard{
+ background-color: $background;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 30px;
+  background-color: white
+}
+.nav__button{
+  @extend %button_shared;
+  width: 56px;
+  background-color: $cyan;
+  border: none;
+}
+
+.sidebar{
+  background-color: red;
+  width: 283px;
+}
+
+
+.wrapper{
+  background-color:yellow;
+  padding: 100px;
 }
