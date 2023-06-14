@@ -2,7 +2,7 @@
 
 
 import Link from "next/link";
-import Sidebar from "./layouts/Sidebar";
+import Sidebar from "./layouts/sidebar/Sidebar";
 import Navbar from "./layouts/Navbar";
 import styles from '../styles/Home.module.scss';
 const Dashboard = () => {

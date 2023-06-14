@@ -1,9 +1,9 @@
-import { AuditIcon, Briefcase, DecisionIcon, FeesChargesIcon, FeesPricingIcon, KarmaIcon, LoanRequestIcon, LoansIcon, OrganisationIcon, PreferencesIcon, ReportIcon, SavingsIcon, SavingsProductIcon, ServiceAccountIcon, ServicesIcon, SettlementsIcon, TransactionsIcon, UserFriends, Users, WhitelistIcon } from "../ui/Svgs";
-
-
+import { AuditIcon, Briefcase, DecisionIcon, FeesChargesIcon, FeesPricingIcon, Home, KarmaIcon, LoanRequestIcon, LoansIcon, OrganisationIcon, PreferencesIcon, ReportIcon, SavingsIcon, SavingsProductIcon, ServiceAccountIcon, ServicesIcon, SettlementsIcon, TransactionsIcon, UserFriends, Users, WhitelistIcon } from "../../ui/Svgs";
+import SidebarCategory from "./SidebarCategory";
+import styles from '../../../styles/Home.module.scss'
+import SidebarItem from "./SidebarItem";
 
 const Sidebar = () => {
-
 
     const customerItems = [
         {
@@ -83,8 +83,6 @@ const Sidebar = () => {
 
     ]
 
-
-
     const settingsItems = [
         {
             icon : <PreferencesIcon />,
@@ -100,13 +98,13 @@ const Sidebar = () => {
         }
     ]
     
-
-
-
     return (
-        <section>
-            Sidebar
-
+        <section className={styles.sidebar}>
+            <SidebarItem icon ={<Briefcase />} text="switch organisatin"/>
+            <SidebarItem icon ={<Home />} text="Dashboard"/>
+            <SidebarCategory category={customerItems} title={"customers"} />
+            <SidebarCategory category={businessesItems} title={"businesses"} />
+            <SidebarCategory category={settingsItems} title={"Settings"} />
         </section>
     );
 }

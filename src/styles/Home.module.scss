@@ -30,6 +30,14 @@ $cyan: #39CDCC;
   outline: none
 }
 
+%sidebar_category_title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #545F7D;
+  text-transform: uppercase
+}
+
 .button {
   @extend %button_shared;
   background-color: $cyan;
@@ -158,30 +166,63 @@ $cyan: #39CDCC;
 //dashboard
 
 
-.dashboard{
- background-color: $background;
+.dashboard {
+  background-color: $background;
 }
 
-.nav{
+.nav {
   display: flex;
   justify-content: space-between;
-  padding: 36px 30px;
-  background-color: white
+  padding: 20px 30px;
+  background-color: white;
+  position: fixed;
+  width: 100%
 }
-.nav__button{
+
+.nav__button {
   @extend %button_shared;
   width: 56px;
   background-color: $cyan;
   border: none;
 }
 
-.sidebar{
-  background-color: red;
-  width: 283px;
+.sidebar {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sidebar_section{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebarList_category {
+  @extend %sidebar_category_title
+}
+
+.wrapper {
+  background-color: yellow;
+  padding: 100px;
 }
 
 
-.wrapper{
-  background-color:yellow;
-  padding: 100px;
+.sidebarList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebarList__item {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  align-items: center;
+  text-decoration: none;
+  color: $dark-blue;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
 }
