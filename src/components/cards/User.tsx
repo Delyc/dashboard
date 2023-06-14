@@ -2,6 +2,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import styles from '../../styles/Home.module.scss'
 const User = ({user} : any) => {
     const [show, setShow] = useState(false)
     const [status,setStatus]  = useState(user.status)
@@ -28,12 +29,12 @@ const User = ({user} : any) => {
 
     
     return ( 
-        <tr>
-        <td >{user.organisationName}</td>
-        <td >{user.username}</td>
-        <td >{user.email}</td>
-        <td >{user.dateJoined}</td>
-        <td >{status}</td>
+        <tr className={styles.table__row}>
+        <td className={styles.table__data}>{user.organisationName}</td>
+        <td className={styles.table__data}>{user.username}</td>
+        <td className={styles.table__data}>{user.email}</td>
+        <td className={styles.table__data}>{user.dateJoined}</td>
+        <td style={{display: "flex", gap:"5px"}} className={styles.table__data}>{status}
         {
             (user.email ===  JSON.parse(localStorage.getItem('user')!) || user.username === "delyce" )&&  <td >
             {
@@ -46,6 +47,8 @@ const User = ({user} : any) => {
             }
             <button onClick={editStatus}>...</button></td>
         }
+        </td>
+        
 
 
     </tr>

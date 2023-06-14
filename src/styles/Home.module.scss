@@ -189,7 +189,6 @@ $cyan: #39CDCC;
 
 .container_wrapper{
   display: flex;
-  gap: 30px;
   background-color: $background;
 }
 .sidebar {
@@ -292,4 +291,56 @@ line-height: 28px;
 text-transform: uppercase;
 
 color: $dark-blue;
+}
+
+
+
+
+//table
+
+.table{
+  border-collapse: collapse;
+  width: 100%;
+  padding: 30px !important;
+  background-color: white;
+  margin-top: 40px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+border-radius: 4px;
+}
+
+// .table__body{
+//   padding: 30px !important;
+
+// }
+ .table__heading{
+  margin: 10px;
+  text-align: left;
+}
+
+.table__header{
+  padding: 30px;
+  font-weight: 600;
+font-size: 12px;
+line-height: 14px;
+text-transform: uppercase;
+
+color: $text-color;
+}
+.table__row{
+  border-collapse: collapse;
+  padding: 23px;
+  font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+
+
+color: $text-color;
+
+}
+.table__data{
+
+  border-bottom: 1px solid #ddd;
+  padding: 23px;
+  text-align: left;
 }

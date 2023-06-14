@@ -7,6 +7,7 @@ import Navbar from "./layouts/Navbar";
 import styles from '../styles/Home.module.scss';
 import UserRecordCount from "./cards/UserRecordCount";
 import { GroupProfileIcon, TwoProfilesIcon, DocumentIcon, DatabaseIcon } from "./ui/Svgs";
+import UsersTable from "./sections/UsersTable";
 const Dashboard = () => {
 
     const userRecords = [
@@ -48,24 +49,9 @@ const Dashboard = () => {
         <>
             <section className={styles.dashboard}>
 
-                {/* <section className={styles.wrappper}> */}
              <Navbar />
 
-                {/* <Sidebar /> */}
 
-                {/* <section className={styles.sidebar}>
-                    <ul>Switch Organisation
-                        <li>users</li>
-                        <li>users</li>
-                        <li>users</li>
-                        <li>users</li>
-                        <li>users</li>
-                        <li>users</li>
-                    </ul>
-                </section>
-                </section>
-                <section>*/}
-                    {/* </section>  */}
                 <div className={styles.container_wrapper}>
                 <Sidebar />
                 <div className={styles.users} >
@@ -77,6 +63,9 @@ const Dashboard = () => {
                         )
                     })}
                     </div>
+
+
+                    <UsersTable />
                     
                 </div>
                 </div>
