@@ -193,10 +193,11 @@ $cyan: #39CDCC;
 }
 
 
-.container_wrapper{
+.container_wrapper {
   display: flex;
   background-color: $background;
 }
+
 .sidebar {
   padding: 120px 30px;
   display: flex;
@@ -257,25 +258,26 @@ $cyan: #39CDCC;
   color: $dark-blue;
 }
 
-.users__records{
+.users__records {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   width: 100%;
 
 }
-.record{
+
+.record {
   background: #FFFFFF;
-border: 1px solid rgba(33, 63, 125, 0.06);
-box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-border-radius: 4px;
-padding: 20px 30px;
-display: flex;
-flex-direction: column;
-gap: 14px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.icon_circle{
+.icon_circle {
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -284,21 +286,21 @@ gap: 14px;
   // opacity: 0.1;
 }
 
-.user__title{
+.user__title {
   font-weight: 500;
-font-size: 14px;
-line-height: 16px;
-text-transform: uppercase;
-color: $text-color;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $text-color;
 }
 
-.user__count{
+.user__count {
   font-weight: 600;
-font-size: 24px;
-line-height: 28px;
-text-transform: uppercase;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
 
-color: $dark-blue;
+  color: $dark-blue;
 }
 
 
@@ -306,50 +308,70 @@ color: $dark-blue;
 
 //table
 
-.table{
+.table {
   border-collapse: collapse;
   width: 100%;
   padding: 30px !important;
   background-color: white;
   margin-top: 40px;
   border: 1px solid rgba(33, 63, 125, 0.06);
-box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-border-radius: 4px;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
 }
 
 // .table__body{
 //   padding: 30px !important;
 
 // }
- .table__heading{
+.table__heading {
   margin: 10px;
   text-align: left;
 }
 
-.table__header{
+.table__header {
   padding: 30px;
-  font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-text-transform: uppercase;
 
-
-color: $text-color;
 }
-.table__row{
+
+.test {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.table__header_name{
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $text-color;
+
+}
+
+.table__row {
   border-collapse: collapse;
   padding: 23px;
   font-weight: 400;
-font-size: 14px;
-line-height: 16px;
+  font-size: 14px;
+  line-height: 16px;
 
 
-color: $text-color;
+  color: $text-color;
 
 }
-.table__data{
+
+.table__data {
 
   border-bottom: 1px solid #ddd;
   padding: 23px;
   text-align: left;
+}
+
+.table__button {
+  border: none;
+  background-color: white;
+}
+
+.table__row_button{
+  border: none;
+  background-color: white;
 }
