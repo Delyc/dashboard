@@ -39,20 +39,25 @@ const User = ({ user }: any) => {
             <td className={styles.table__data}>{user.email}</td>
             <td className={styles.table__data}>{user.phone}</td>
             <td  className={styles.table__data}>{user.dateJoined}</td>
-            <td  style={{ display: "flex", gap: "5px" , justifyContent: "space-between"}} className={styles.table__data}>{status}
+            <td  style={{ display: "flex", gap: "5px" , justifyContent: "space-between", position:"relative"}} className={styles.table__data}>
+
+              
+                {status}
                 {
-                    (user.email === JSON.parse(localStorage.getItem('user')!) || user.username === "delyce") && <td >
+                    (user.email === JSON.parse(localStorage.getItem('user')!) || user.username === "delyce") && <td>
                         {
-                            show && <div>
+                            show && <div className={styles.table__options} style={{position: "absolute", top:"10px"
+                        }}>
 
                                 <Link href={`/user/${user.id}`}>View Deatils</Link>
                                 <h1 onClick={(() => onChangeStatus("Blacklist User"))}>Blacklist User</h1>
                                 <h1 onClick={(() => onChangeStatus(`${user.status === "active" ? "active" : "inactive"}`))}>{user.status === "active" ? "deActivate User" : "activate User"}</h1>
                             </div>
                         }
-                        <Button className={styles.table__row_button}  onClick={editStatus} icon={<ThreeDots />}/>
 
+                        <Button className={styles.table__row_button}  onClick={editStatus} icon={<ThreeDots />}/>
                         </td>
+
                 }
             </td>
 

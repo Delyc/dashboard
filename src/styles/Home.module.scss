@@ -364,6 +364,7 @@ $cyan: #39CDCC;
   border-bottom: 1px solid #ddd;
   padding: 23px;
   text-align: left;
+  position: relative;
 }
 
 .table__button {
@@ -375,3 +376,26 @@ $cyan: #39CDCC;
   border: none;
   background-color: white;
 }
+
+.table__options{
+right: 30px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid rgba(84, 95, 125, 0.04);
+box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+border-radius: 4px;
+}
+
+
+.filter{
+  padding: 30px 20px;
+  background-color: white;
+  width: 270px;
+  position: absolute;
+  z-index: 50;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+border-radius: 4px;
+margin-left: 20px;
+}
+

@@ -54,7 +54,10 @@ export default function Home() {
     };
     return (
         <>
-            <section className={styles.container}>
+
+
+        {/* <Filter /> */}
+            {/* <section className={styles.container}>
                 <div className={styles.logo}>
                     <Image src={logo} className={styles.logo_image} alt='Logo' />
                 </div>
@@ -85,7 +88,7 @@ export default function Home() {
                         </form>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
     )
 }

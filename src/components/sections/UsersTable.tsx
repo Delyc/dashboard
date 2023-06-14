@@ -4,9 +4,11 @@ import User from "@/components/cards/User";
 import { Filter } from "../ui/Svgs";
 import styles from '../../styles/Home.module.scss'
 import Button from "../ui/Button";
+import FilterModal from "../ui/FilterModal";
 
 const UsersTable = () => {
     const [users, setUsers] = useState([])
+    const [filterModal, setFilterModal] = useState(false)
     useEffect(() => {
         const getUsers = async () => {
             try {
@@ -22,6 +24,12 @@ const UsersTable = () => {
 
     const handleFilter = () => {
         console.log("clicked")
+    }
+
+    const showFilterModal = (e: any) => {
+        e.preventDefault()
+        setFilterModal(!filterModal)
+        
     }
 
 
@@ -40,7 +48,7 @@ const UsersTable = () => {
                                     <p className={styles.table__header_name}>{item}
 </p>
                                     
-                                    <Button onClick={handleFilter} icon={<Filter />} className={styles.table__button} />
+                                    <Button onClick={showFilterModal} icon={<Filter />} className={styles.table__button} />
                                 </div></th>
                         )
                     })}
@@ -48,6 +56,7 @@ const UsersTable = () => {
                 </tr>
             </thead>
             <tbody className={styles.table__body}>
+                {filterModal && <FilterModal setFilterModal={setFilterModal}/>}
 
                 {users.map((user: any, index: any) => {
                     return (

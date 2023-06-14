@@ -15,14 +15,14 @@ const Dashboard = () => {
             icon: <TwoProfilesIcon />,
             text: "Users",
             values : 2453,
-            background: "#DF18FF"
+            background: "#e018ff1c"
 
         },
         {
             icon: <GroupProfileIcon />,
             text: "Active Users",
             values : 2453,
-            background: "#5718FF"
+            background: "#5618ff25"
 
 
         },
@@ -30,7 +30,7 @@ const Dashboard = () => {
             icon: <DocumentIcon />,
             text: "Users with Loans",
             values : 2453,
-            background: "#F55F44"
+            background: "#f55f4417"
 
 
         },
@@ -38,7 +38,7 @@ const Dashboard = () => {
             icon: <DatabaseIcon />,
             text: "Users with Savings",
             values : 2453,
-            background: "345, 100%, 60%"
+            background: "#ff336617"
 
 
         },
