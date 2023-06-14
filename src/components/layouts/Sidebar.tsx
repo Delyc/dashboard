@@ -1,21 +1,114 @@
-import { Briefcase } from "../ui/Svgs";
-
-const customerItems = [
-    {
-        icon: ,
-        text: ''
-    }
-]
+import { AuditIcon, Briefcase, DecisionIcon, FeesChargesIcon, FeesPricingIcon, KarmaIcon, LoanRequestIcon, LoansIcon, OrganisationIcon, PreferencesIcon, ReportIcon, SavingsIcon, SavingsProductIcon, ServiceAccountIcon, ServicesIcon, SettlementsIcon, TransactionsIcon, UserFriends, Users, WhitelistIcon } from "../ui/Svgs";
 
 
 
+const Sidebar = () => {
 
-    return ( 
+
+    const customerItems = [
+        {
+            icon: <UserFriends />,
+            text: 'Users'
+        },
+
+        {
+            icon: <Users />,
+            text: 'Guarantors'
+        },
+        {
+            icon: <LoansIcon />,
+            text: 'Loans'
+        },
+        {
+            icon: <DecisionIcon />,
+            text: 'Decision Models'
+        },
+        {
+            icon: <SavingsIcon />,
+            text: 'Savings'
+        },
+        {
+            icon: <LoanRequestIcon />,
+            text: 'Loan Requests'
+        },
+        {
+            icon: <WhitelistIcon />,
+            text: 'Whitelist'
+        },
+        {
+            icon: <KarmaIcon />,
+            text: 'Karma'
+        },
+
+    ]
+
+    const businessesItems = [
+        {
+            icon: <OrganisationIcon />,
+            text: 'Organization'
+        },
+        {
+            icon: <LoanRequestIcon />,
+            text: 'Loan Products'
+        },
+
+        {
+            icon: <SavingsProductIcon />,
+            text: 'Savings Products'
+        },
+        {
+            icon: <FeesChargesIcon />,
+            text: 'Fees and Charges'
+        },
+        {
+            icon: <TransactionsIcon />,
+            text: 'Transactions'
+        },
+        {
+            icon: <ServicesIcon />,
+            text: 'Services'
+        },
+        {
+            icon: <ServiceAccountIcon />,
+            text: 'Service Account'
+        },
+        {
+            icon: <SettlementsIcon />,
+            text: 'Settlements'
+        },
+        {
+            icon: <ReportIcon />,
+            text: 'Report'
+        },
+
+    ]
+
+
+
+    const settingsItems = [
+        {
+            icon : <PreferencesIcon />,
+            text: 'Preferences',
+        },
+        {
+            icon : <FeesPricingIcon />,
+            text: 'Fees and Pricing',
+        },
+        {
+            icon : <AuditIcon />,
+            text: 'Audit Logs',
+        }
+    ]
+    
+
+
+
+    return (
         <section>
             Sidebar
-         
+
         </section>
-     );
+    );
 }
- 
+
 export default Sidebar;
