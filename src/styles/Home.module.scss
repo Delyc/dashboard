@@ -362,8 +362,9 @@ $cyan: #39CDCC;
 .table__data {
 
   border-bottom: 1px solid #ddd;
-  padding: 23px;
   text-align: left;
+  min-height: 50px;
+  padding: 0 23px;
   position: relative;
 }
 

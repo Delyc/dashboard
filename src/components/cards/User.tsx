@@ -20,6 +20,7 @@ const User = ({ user }: any) => {
 
 
     const onChangeStatus = (value: string) => {
+        console.log("alue", value)
         setStatus(value)
         axios.patch(`http://localhost:4000/users/${user.id}`,
             {
@@ -51,7 +52,8 @@ const User = ({ user }: any) => {
 
                                 <Link href={`/user/${user.id}`}>View Deatils</Link>
                                 <h1 onClick={(() => onChangeStatus("Blacklist User"))}>Blacklist User</h1>
-                                <h1 onClick={(() => onChangeStatus(`${user.status === "active" ? "active" : "inactive"}`))}>{user.status === "active" ? "deActivate User" : "activate User"}</h1>
+                                <h1 onClick={(() => onChangeStatus(status === "active" ? "inactivate" : "active"))}>{status === "active" ? "inactivate" : "active"}</h1>
+                                {/* <h1 onClick={(() => onChangeStatus(`${status === "active" ? "active" : "inactive"}`))}>{status === "active" ? "deActivate User" : "activate User"}</h1> */}
                             </div>
                         }
 

@@ -56,7 +56,7 @@ const UsersTable = () => {
                 </tr>
             </thead>
             <tbody className={styles.table__body}>
-                {filterModal && <FilterModal setFilterModal={setFilterModal}/>}
+                {filterModal && <FilterModal setUsers={setUsers} setFilterModal={setFilterModal}/>}
 
                 {users.map((user: any, index: any) => {
                     return (

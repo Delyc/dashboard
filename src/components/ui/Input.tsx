@@ -3,13 +3,16 @@ interface Props{
     placeholder: string,
     name: string,
     value: string,
-    onChange: any
+    onChange: any,
+    register: any
 }
+import { forwardRef } from 'react';
 import styles from '../../styles/Home.module.scss'
-const Input = ({className, placeholder, value, name, onChange} : Props) => {
+const Input = (prop : any,ref:any) => {
+    console.log(prop,"--")
     return ( 
-        <input className={`${className}  ${styles.login__input}`} placeholder={placeholder} name={name} onChange={onChange} value={value}/>
+        <input ref={ref} {...prop} />
      );
 }
  
-export default Input;
+export default forwardRef(Input) ;
