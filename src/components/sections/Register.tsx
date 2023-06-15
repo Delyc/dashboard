@@ -78,7 +78,7 @@ const Register = () => {
             </div>
             <div className={styles.login}>
                 <div className={styles.login__image_section}>
-                    <Image className={styles.login__image} src={loginImage} layout='fill' alt='man' />
+                    <Image className={styles.login__image} src={loginImage}  alt='man' />
                 </div>
                 <div className={styles.login__form_section}>
                     <div className={styles.login__content}>
