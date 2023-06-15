@@ -1,6 +1,6 @@
 
 import axios from "axios"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import styles from '../../styles/Home.module.scss'
 import { ActivateUser, Eye, ThreeDots, UserBlacklit } from "../ui/Svgs"
@@ -9,16 +9,8 @@ const User = ({ user }: any) => {
     const [show, setShow] = useState(false)
     const [status, setStatus] = useState(user.status)
     const editStatus = () => {
-        console.log("iam clicked")
         setShow(!show)
     }
-
-    console.log("user status", user.status)
-
-    let userT = localStorage.user
-    console.log(userT)
-
-
     const onChangeStatus = (value: string) => {
         console.log("alue", value)
         setStatus(value)
@@ -30,41 +22,31 @@ const User = ({ user }: any) => {
             })
     }
 
-
-
-
     return (
         <tr className={styles.table__row}>
-            <td  className={styles.table__data}>{user.organisationName}</td>
-            <td  className={styles.table__data}>{user.username}</td>
+            <td className={styles.table__data}>{user.organisationName}</td>
+            <td className={styles.table__data}>{user.username}</td>
             <td className={styles.table__data}>{user.email}</td>
             <td className={styles.table__data}>{user.phone}</td>
-            <td  className={styles.table__data}>{user.dateJoined}</td>
-            <td  style={{ display: "flex", gap: "5px" , justifyContent: "space-between", position:"relative"}} className={styles.table__data}>
-
-              
+            <td className={styles.table__data}>{user.dateJoined}</td>
+            <td style={{ display: "flex", gap: "5px", justifyContent: "space-between", position: "relative" }} className={styles.table__data}>
                 {status}
                 {
                     (user.email === JSON.parse(localStorage.getItem('user')!) || user.username === "delyce") && <td>
                         {
-                            show && <div className={styles.table__options} style={{position: "absolute", top:"10px"
-                        }}>
+                            show && <div className={styles.table__options} style={{
+                                position: "absolute", top: "10px"
+                            }}>
 
                                 <Link className={styles.options__link} href={`/user/${user.id}`}><Eye /> View Deatils</Link>
                                 <button className={styles.options__button} onClick={(() => onChangeStatus("Blacklist User"))}> <UserBlacklit /> Blacklist User</button>
                                 <button className={styles.options__button} onClick={(() => onChangeStatus(status === "active" ? "inactivate" : "active"))}><ActivateUser /> {status === "active" ? "inactivate" : "active"}</button>
-                                {/* <h1 onClick={(() => onChangeStatus(`${status === "active" ? "active" : "inactive"}`))}>{status === "active" ? "deActivate User" : "activate User"}</h1> */}
                             </div>
                         }
-
-                        <Button className={styles.table__row_button}  onClick={editStatus} icon={<ThreeDots />}/>
-                        </td>
-
+                        <Button className={styles.table__row_button} onClick={editStatus} icon={<ThreeDots />} />
+                    </td>
                 }
             </td>
-
-
-
         </tr>
     );
 }

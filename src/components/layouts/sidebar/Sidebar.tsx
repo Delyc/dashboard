@@ -85,23 +85,23 @@ const Sidebar = () => {
 
     const settingsItems = [
         {
-            icon : <PreferencesIcon />,
+            icon: <PreferencesIcon />,
             text: 'Preferences',
         },
         {
-            icon : <FeesPricingIcon />,
+            icon: <FeesPricingIcon />,
             text: 'Fees and Pricing',
         },
         {
-            icon : <AuditIcon />,
+            icon: <AuditIcon />,
             text: 'Audit Logs',
         }
     ]
-    
+
     return (
         <section className={styles.sidebar}>
-            <SidebarItem icon ={<Briefcase />} text="switch organisatin"/>
-            <SidebarItem icon ={<Home />} text="Dashboard"/>
+            <SidebarItem icon={<Briefcase />} text="switch organisatin" />
+            <SidebarItem icon={<Home />} text="Dashboard" />
             <SidebarCategory category={customerItems} title={"customers"} />
             <SidebarCategory category={businessesItems} title={"businesses"} />
             <SidebarCategory category={settingsItems} title={"Settings"} />

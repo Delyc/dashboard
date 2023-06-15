@@ -1,9 +1,8 @@
 import styles from '../../styles/Home.module.scss'
 const PersonalInfo = () => {
-    return ( 
+    return (
         <section className={styles.user__info_wrapper}>
             <h1>Personal Information</h1>
-
             <div className={styles.personal_info}>
                 <div>
                     <h3>Fulll name</h3>
@@ -39,7 +38,7 @@ const PersonalInfo = () => {
                 </div>
             </div>
         </section>
-     );
+    );
 }
- 
+
 export default PersonalInfo;

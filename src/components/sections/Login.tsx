@@ -17,29 +17,23 @@ interface LoginPayload {
     password: string,
 }
 
-
 const Login = () => {
-
     const [showPassword, setShowPassword] = useState<any>(false);
     const handleTogglePassword = () => {
         setShowPassword(!showPassword);
     };
-
     const validationSchema = Yup.object().shape({
         email: Yup.string().required("Email is required").email("Email is invalid"),
         password: Yup.string().required("password is required"),
     });
-
     const formOptions = { resolver: yupResolver(validationSchema) };
     const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors } = formState
     const router = useRouter()
 
-
     const loginUser = async (data: LoginPayload) => {
         try {
             const res = await axios.post("http://localhost:4000/login", data);
-            console.log(res.data.user)
             toast.success("Logged successfully")
             localStorage.setItem("user", JSON.stringify(res.data.user.email));
             localStorage.setItem("token", res.data.accessToken);
@@ -49,14 +43,7 @@ const Login = () => {
         }
     };
 
-
     const onSubmit = (data: any) => {
-        // setEmail("");
-        // setOrganisationName("");
-        // setPassword("");
-        // setPhone("");
-        // setUsername("")
-        // e.preventDefault();
         const loginData = {
             email: data.email,
             password: data.password,
@@ -81,22 +68,13 @@ const Login = () => {
                     <form className={`${styles.login__form}`} onSubmit={handleSubmit(onSubmit)}>
                         <Input {...register("email")} className={styles.login__input} placeholder='Email' name='email' />
                         <div className={styles.input__errors}>{errors.email?.message}</div>
-
-                            
                         <div className={styles.login__show}>
                             <Input {...register("password")} className={`${styles.login__input} ${styles.login__input_showPassword}`} placeholder='Password' name='password' type={showPassword ? 'text' : 'password'} />
-                            <p className={styles.login__showPassword} onClick={() => handleTogglePassword()}>{showPassword ? "Hide": "SHOW"}</p>
-
+                            <p className={styles.login__showPassword} onClick={() => handleTogglePassword()}>{showPassword ? "Hide" : "SHOW"}</p>
                             <div className={styles.input__errors}>{errors.password?.message}</div>
-
-
                         </div>
                         <p className={styles.login__forgotPassword}>Forgot PASSWORD?</p>
-                        <Button text="log in" className={styles.register__button} type='submit'/>
-
-
-                       
-
+                        <Button text="log in" className={styles.register__button} type='submit' />
                     </form>
                 </div>
             </div>

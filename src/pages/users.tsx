@@ -19,7 +19,7 @@ const Users = () => {
         getUsers();
     }, []);
 
-    
+
 
 
 
@@ -41,7 +41,7 @@ const Users = () => {
 
                     {users.map((user: any, index: any) => {
                         return (
-                             <User  key={index} user={user}/>
+                            <User key={index} user={user} />
                         )
                     })}
 

@@ -22,17 +22,11 @@ const UsersTable = () => {
         getUsers();
     }, []);
 
-    const handleFilter = () => {
-        console.log("clicked")
-    }
-
     const showFilterModal = (e: any) => {
         e.preventDefault()
         setFilterModal(!filterModal)
-        
+
     }
-
-
     const tableItem = ["Organization name", "username", "Email", "phone number", "DAte Joined", "Status"]
 
     return (
@@ -43,32 +37,25 @@ const UsersTable = () => {
                     {tableItem.map((item: string, index: number) => {
                         return (
                             <th className={styles.table__header} key={index}>
-
                                 <div className={styles.test}>
                                     <p className={styles.table__header_name}>{item}
-</p>
-                                    
+                                    </p>
                                     <Button onClick={showFilterModal} icon={<Filter />} className={styles.table__button} />
-                                </div></th>
+                                </div>
+                            </th>
                         )
                     })}
-
                 </tr>
             </thead>
             <tbody className={styles.table__body}>
-                {filterModal && <FilterModal setUsers={setUsers} setFilterModal={setFilterModal}/>}
-
+                {filterModal && <FilterModal setUsers={setUsers} setFilterModal={setFilterModal} />}
                 {users.map((user: any, index: any) => {
                     return (
                         <User key={index} user={user} />
                     )
                 })}
-
-
             </tbody>
         </table>
-
     );
 }
-
 export default UsersTable;

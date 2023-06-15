@@ -1,9 +1,8 @@
 import styles from '../../styles/Home.module.scss'
 const Education = () => {
-    return ( 
+    return (
         <section className={styles.user__info_wrapper}>
             <h1>Education and Employment</h1>
-
             <div className={styles.personal_info}>
                 <div>
                     <h3>level of education</h3>
@@ -35,7 +34,7 @@ const Education = () => {
                 </div>
             </div>
         </section>
-     );
+    );
 }
- 
+
 export default Education;

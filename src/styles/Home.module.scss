@@ -66,8 +66,6 @@ $cyan: #39CDCC;
 .login__input {
   @extend %input-shared;
   font-family: $font-family-work-sans;
-
-
 }
 
 .input__errors {
@@ -170,13 +168,9 @@ $cyan: #39CDCC;
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
-
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
-  /* 6 */
-
   color: #FFFFFF;
 }
 
@@ -249,8 +243,6 @@ $cyan: #39CDCC;
   width: 100%;
   border-radius: 8px;
   font-family: $font-family-work-sans;
-
-
 }
 
 .nav__button {
@@ -270,7 +262,6 @@ $cyan: #39CDCC;
   display: flex;
   align-items: center;
   gap: 8px;
-
 }
 
 .container_wrapper {
@@ -346,7 +337,6 @@ $cyan: #39CDCC;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   width: 100%;
-
 }
 
 .record {
@@ -366,7 +356,6 @@ $cyan: #39CDCC;
   height: 40px;
   display: grid;
   place-content: center;
-  // opacity: 0.1;
 }
 
 .user__title {
@@ -398,10 +387,6 @@ $cyan: #39CDCC;
   border-radius: 4px;
 }
 
-// .table__body{
-//   padding: 30px !important;
-
-// }
 .table__heading {
   margin: 10px;
   text-align: left;
@@ -409,7 +394,6 @@ $cyan: #39CDCC;
 
 .table__header {
   padding: 30px;
-
 }
 
 .test {
@@ -424,7 +408,6 @@ $cyan: #39CDCC;
   line-height: 14px;
   text-transform: uppercase;
   color: $text-color;
-
 }
 
 .table__row {
@@ -482,10 +465,8 @@ $cyan: #39CDCC;
   font-weight: 500;
   font-size: 14px;
   font-family: $font-family-work-sans;
-
   line-height: 16px;
   text-decoration: none;
-
   color: #545F7D;
 }
 
@@ -515,7 +496,6 @@ $cyan: #39CDCC;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-
   color: $text-color;
 }
 
@@ -568,29 +548,27 @@ $cyan: #39CDCC;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    /* identical to box height */
-
-
     color: #545F7D;
   }
 }
-.user__details{
+
+.user__details {
   display: flex;
   flex-direction: column;
   gap: 46px
 }
+
 .user__actions {
   display: flex;
   justify-content: space-between;
 }
 
-.user__actions{
-  h3{
+.user__actions {
+  h3 {
     font-weight: 500;
-font-size: 24px;
-line-height: 28px;
-
-color: $dark-blue;
+    font-size: 24px;
+    line-height: 28px;
+    color: $dark-blue;
   }
 }
 
@@ -650,7 +628,6 @@ color: $dark-blue;
   align-items: center;
   border-right: 1px solid #545f7d3b;
   padding-right: 30px;
-
 }
 
 .user__info_names {
@@ -665,14 +642,12 @@ color: $dark-blue;
     font-size: 22px;
     line-height: 26px;
     color: $dark-blue;
-
   }
 
   p {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-
     color: $text-color;
   }
 }
@@ -741,13 +716,12 @@ color: $dark-blue;
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
-
   color: rgba(0, 0, 0, 0.8);
 }
 
 .user__fulldetails {
   background-color: white;
-  padding:  0 30px;
+  padding: 0 30px;
   padding-bottom: 46px;
 }
 
@@ -757,8 +731,6 @@ color: $dark-blue;
   gap: 30px;
   border-bottom: 1px solid #21407d3b;
   padding: 30px 0;
-
-
 }
 
 .user__info_wrapper {
@@ -766,9 +738,6 @@ color: $dark-blue;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    /* identical to box height */
-
-
     color: $dark-blue;
   }
 }
@@ -777,7 +746,6 @@ color: $dark-blue;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
-
 }
 
 .personal_info {
@@ -791,10 +759,7 @@ color: $dark-blue;
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
-    /* identical to box height */
-
     text-transform: uppercase;
-
     color: $text-color;
   }
 
@@ -802,9 +767,6 @@ color: $dark-blue;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    /* identical to box height */
-
-
     color: $text-color;
   }
 }

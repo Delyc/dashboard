@@ -1,4 +1,4 @@
-interface Props{
+interface Props {
     className: string,
     placeholder: string,
     name: string,
@@ -7,11 +7,9 @@ interface Props{
     register: any
 }
 import { forwardRef } from 'react';
-const Input = (prop : any,ref:any) => {
-    console.log(prop,"--")
-    return ( 
-        <input ref={ref} {...prop}/>
-     );
+const Input = (prop: any, ref: any) => {
+    return (
+        <input ref={ref} {...prop} />
+    );
 }
- 
-export default forwardRef(Input) ;
+export default forwardRef(Input);
