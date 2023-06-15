@@ -7,11 +7,10 @@ interface Props{
     register: any
 }
 import { forwardRef } from 'react';
-import styles from '../../styles/Home.module.scss'
 const Input = (prop : any,ref:any) => {
     console.log(prop,"--")
     return ( 
-        <input ref={ref} {...prop} />
+        <input ref={ref} {...prop}/>
      );
 }
  

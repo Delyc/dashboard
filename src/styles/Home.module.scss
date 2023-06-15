@@ -43,6 +43,10 @@ $cyan: #39CDCC;
   text-transform: uppercase
 }
 
+.input {
+  @extend %input-shared
+}
+
 .button {
   @extend %button_shared;
   background-color: $cyan;
@@ -162,15 +166,7 @@ $cyan: #39CDCC;
   color: #39CDCC;
 }
 
-
-
-
-
-
-
 //dashboard
-
-
 .dashboard {
   background-color: $background;
   font-family: $font-family-primary;
@@ -179,10 +175,38 @@ $cyan: #39CDCC;
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 30px;
   background-color: white;
   position: fixed;
-  width: 100%
+  width: 100%;
+  z-index: 50;
+  font-family: $font-family-primary;
+}
+
+.nav__details {
+  width: 73%;
+  margin-right: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__search {
+  border: 1px solid #21407d48;
+  border-radius: 8px;
+  height: 40px;
+  width: 400px;
+  display: flex;
+}
+
+.nav__input {
+  @extend %input-shared;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  font-family: $font-family-primary;
+
+
 }
 
 .nav__button {
@@ -192,6 +216,18 @@ $cyan: #39CDCC;
   border: none;
 }
 
+.nav__profile{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.nav__user{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+}
 
 .container_wrapper {
   display: flex;
@@ -299,15 +335,11 @@ $cyan: #39CDCC;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-
   color: $dark-blue;
 }
 
 
-
-
 //table
-
 .table {
   border-collapse: collapse;
   width: 100%;
@@ -338,7 +370,8 @@ $cyan: #39CDCC;
   align-items: center;
   gap: 10px;
 }
-.table__header_name{
+
+.table__header_name {
   font-weight: 600;
   font-size: 12px;
   line-height: 14px;
@@ -353,14 +386,10 @@ $cyan: #39CDCC;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-
-
   color: $text-color;
-
 }
 
 .table__data {
-
   border-bottom: 1px solid #ddd;
   text-align: left;
   min-height: 50px;
@@ -373,30 +402,28 @@ $cyan: #39CDCC;
   background-color: white;
 }
 
-.table__row_button{
+.table__row_button {
   border: none;
   background-color: white;
 }
 
-.table__options{
-right: 30px;
+.table__options {
+  right: 30px;
   background-color: white;
   padding: 20px;
   border: 1px solid rgba(84, 95, 125, 0.04);
-box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-border-radius: 4px;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
 }
 
-
-.filter{
+.filter {
   padding: 30px 20px;
   background-color: white;
   width: 270px;
   position: absolute;
   z-index: 50;
   border: 1px solid rgba(84, 95, 125, 0.14);
-box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-border-radius: 4px;
-margin-left: 20px;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  margin-left: 20px;
 }
-
