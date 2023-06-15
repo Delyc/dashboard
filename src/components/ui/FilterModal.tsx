@@ -60,9 +60,9 @@ const FilterModal = ({setFilterModal,setUsers} : any) => {
                 <Select placeholder='Select' options={organisations}/>
             </div>
 
-            <div>
-                <Button className={undefined} text='Reset' onClick={() => setFilterModal(false)}/>
-                <Button className={undefined} text='Filter' onClick={(()=>submitFiter())}/>
+            <div className={styles.filter__buttons}>
+                <Button className={styles.reset_button} text='Reset' onClick={() => setFilterModal(false)}/>
+                <Button className={styles.filter_button} text='Filter' onClick={(()=>submitFiter())}/>
             </div>
         
         </section>

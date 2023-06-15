@@ -216,13 +216,13 @@ $cyan: #39CDCC;
   border: none;
 }
 
-.nav__profile{
+.nav__profile {
   display: flex;
   gap: 50px;
   align-items: center;
 }
 
-.nav__user{
+.nav__user {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -284,6 +284,9 @@ $cyan: #39CDCC;
   margin-top: 100px;
   width: 80%;
   font-family: $font-family-primary;
+  display: flex;
+  flex-direction: column;
+  gap: 40px
 }
 
 .users__title {
@@ -409,17 +412,42 @@ $cyan: #39CDCC;
 
 .table__options {
   right: 30px;
+  margin-top: 15px;
   background-color: white;
   padding: 20px;
   border: 1px solid rgba(84, 95, 125, 0.04);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
+  width: 130px;
+  z-index: 50;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
 }
 
+.options__link{
+  color: $text-color;
+  text-decoration: none;
+}
+
+.options__button{
+  border: none;
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  font-weight: 500;
+font-size: 14px;
+font-family: $font-family-primary;
+
+line-height: 16px;
+text-decoration: none;
+
+color: #545F7D;
+}
 .filter {
   padding: 30px 20px;
   background-color: white;
-  width: 270px;
+  width: 230px;
   position: absolute;
   z-index: 50;
   border: 1px solid rgba(84, 95, 125, 0.14);
@@ -430,20 +458,53 @@ $cyan: #39CDCC;
   flex-direction: column;
   gap: 20px;
 }
-.filter__item{
+
+.filter__item {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.filter__item_name{
-  font-weight: 500;
-font-size: 14px;
-line-height: 16px;
 
-color: $text-color;
+.filter__item_name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: $text-color;
 }
-.filter__input{
+
+.filter__input {
   @extend %input-shared;
-  width: 85%;  padding: 12px 20px;
+  width: 80%;
+  padding: 12px 20px;
+}
+
+.filter__buttons {
+  display: flex;
+  justify-content: space-between
+}
+
+.reset_button {
+  @extend %button_shared;
+  padding: 12px 30px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: $text-color;
+  width: 98px;
+  border: 1px solid #545F7D;
+  background-color: white
+}
+
+.filter_button {
+  @extend %button_shared;
+  background-color: $cyan;
+  border: none;
+  padding: 12px 30px;
+  width: 98px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
 }

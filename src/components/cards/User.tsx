@@ -3,7 +3,7 @@ import axios from "axios"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import styles from '../../styles/Home.module.scss'
-import { ThreeDots } from "../ui/Svgs"
+import { ActivateUser, Eye, ThreeDots, UserBlacklit } from "../ui/Svgs"
 import Button from "../ui/Button"
 const User = ({ user }: any) => {
     const [show, setShow] = useState(false)
@@ -50,9 +50,9 @@ const User = ({ user }: any) => {
                             show && <div className={styles.table__options} style={{position: "absolute", top:"10px"
                         }}>
 
-                                <Link href={`/user/${user.id}`}>View Deatils</Link>
-                                <h1 onClick={(() => onChangeStatus("Blacklist User"))}>Blacklist User</h1>
-                                <h1 onClick={(() => onChangeStatus(status === "active" ? "inactivate" : "active"))}>{status === "active" ? "inactivate" : "active"}</h1>
+                                <Link className={styles.options__link} href={`/user/${user.id}`}><Eye /> View Deatils</Link>
+                                <button className={styles.options__button} onClick={(() => onChangeStatus("Blacklist User"))}> <UserBlacklit /> Blacklist User</button>
+                                <button className={styles.options__button} onClick={(() => onChangeStatus(status === "active" ? "inactivate" : "active"))}><ActivateUser /> {status === "active" ? "inactivate" : "active"}</button>
                                 {/* <h1 onClick={(() => onChangeStatus(`${status === "active" ? "active" : "inactive"}`))}>{status === "active" ? "deActivate User" : "activate User"}</h1> */}
                             </div>
                         }
