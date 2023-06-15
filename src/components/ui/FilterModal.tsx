@@ -35,29 +35,29 @@ const FilterModal = ({setFilterModal,setUsers} : any) => {
 
             <div className={styles.filter__item}>
                 <p className={styles.filter__item_name}>Organisation</p>
-                <Select onChange={((data)=>{setSelect(data?.value)})} options={organisations}/>
+                <Select placeholder='select' onChange={((data)=>{setSelect(data?.value)})} options={organisations}/>
             </div>
 
             <div className={styles.filter__item}>
                 <p className={styles.filter__item_name}>Username</p>
-                <Input className={''} placeholder={''} name={''}  onChange={((e:any)=>setUsername(e.target.value))} />
+                <Input placeholder='User' className={styles.filter__input}  name={''}  onChange={((e:any)=>setUsername(e.target.value))} />
             </div>
 
             <div className={styles.filter__item}>
                 <p className={styles.filter__item_name}>Email</p>
-                <Input className={''} placeholder={''} name={''} onChange={((e:any)=>setEmail(e.target.value))} />
+                <Input className={styles.filter__input} placeholder='Email' name={''} onChange={((e:any)=>setEmail(e.target.value))} />
             </div>
 
 
             <div className={styles.filter__item}>
                 <p className={styles.filter__item_name}>Date</p>
-                <DatePicker selected={startDate} onChange={(date:any) => setStartDate(date)} />
+                <DatePicker placeholderText='Date' className={styles.filter__input} selected={startDate} onChange={(date:any) => setStartDate(date)} />
                 {/* <Input className={''} placeholder={''} name={''}  onChange={((e:any)=>setUsername(e.target.value))} /> */}
             </div>
 
             <div className={styles.filter__item}>
                 <p className={styles.filter__item_name}>Status</p>
-                <Select  options={organisations}/>
+                <Select placeholder='Select' options={organisations}/>
             </div>
 
             <div>
