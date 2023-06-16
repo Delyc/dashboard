@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { useRouter } from 'next/router';
 import Register from '../components/sections/Register';
+import '@testing-library/jest-dom/extend-expect';
 
 jest.mock('next/router', () => ({
   useRouter: jest.fn(),
@@ -31,7 +32,7 @@ describe('Register component', () => {
     expect(phoneInput.value).toBe('1234567890');
     // Add more assertions as needed
   });
-  
+
   it('submits the form successfully', () => {
     useRouter.mockImplementationOnce(() => ({
       push: jest.fn(),
@@ -65,4 +66,6 @@ describe('Register component', () => {
       expect(useRouter().push).toHaveBeenCalledWith('/login');
     }, 1000);
   });
+
+
 });
