@@ -1,1 +1,1 @@
-[![UNITEST CI/CD](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/unitest.yml/badge.svg)](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/unitest.yml)
+[![UNITEST CI/CD](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/unitest.yml/badge.svg)](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/unitest.yml)  <a href="https://codeclimate.com/github/Delyc/lendsqr-fe-test/maintainability"><img src="https://api.codeclimate.com/v1/badges/611eeab10dc94101cc1d/maintainability" /></a>
