@@ -1,5 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export default interface UserInterface {
+    organisation: any
+    status: string
     success: boolean
     data: {
         user: {

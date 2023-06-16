@@ -10,9 +10,10 @@ import { useRouter } from "next/router";
 import { toast } from 'react-toastify'
 import { useState } from "react";
 import { Logout } from "../ui/Svgs";
+import { getLocalStorageItem } from "@/helpers/localStorage";
 const Navbar = () => {
     const router = useRouter()
-    const userJson = localStorage.getItem("user");
+    const userJson = getLocalStorageItem("user");
     const user = userJson ? JSON.parse(userJson) : null;
     const [showMenu, setShowMenu] = useState(false)
 

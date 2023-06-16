@@ -21,6 +21,7 @@ const User = ({ user,refetch }: any) => {
                 password: user.password
             })
             refetch()
+            setShow(false)
     }
 
     return (

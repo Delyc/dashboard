@@ -1,7 +1,7 @@
 interface Props {
     icon: any,
     text: string,
-    count: number;
+    count: any;
     background: string;
 }
 import styles from '../../styles/Home.module.scss'

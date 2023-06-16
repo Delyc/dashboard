@@ -6,34 +6,54 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from 'react';
 import axios from 'axios';
+import { useUsersQuery } from '@/redux/services/users';
 
-const FilterModal = ({ setFilterModal, setUsers }: any) => {
+const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
+
+
+    console.log("filtyer")
+    console.log("test hhh", organisation)
     const [select, setSelect] = useState<string | undefined>()
     const [email, setEmail] = useState()
     const [username, setUsername] = useState()
-    const [status, setStatus] = useState()
-    const [organisationName, setOrganisationName] = useState([])
     const [dateJoined, setDateJoined] = useState()
     const [phone, setPhone] = useState()
     const [startDate, setStartDate] = useState(new Date());
     const submitFiter = async () => {
         try {
-            const res = await axios.get(`http://localhost:4000/users?isDelete=false${select ? `&organisationName=${select}` : ""}${email ? `&email=${email}` : ""} ${username ? `&username=${username}` : ""} ${phone ? `&phone=${phone}` : ""}${dateJoined ? `&dateJoined=${dateJoined}` : ""}${status ? `&status=${status}` : ""}`);
+            const res = await axios.get(`http://localhost:4000/users?isDelete=false${select ? `&organisationName=${select}` : ""}${email ? `&email=${email}` : ""}${username ? `&username=${username}` : ""}${phone ? `&phone=${phone}` : ""}${dateJoined ? `&dateJoined=${dateJoined}` : ""}${status ? `&status=${status}` : ""}`);
             setUsers(res.data)
         } catch (error) {
         }
+        setFilterModal(false)
     }
-    const organisations = [
+
+
+    //     const organizationOnlyArray = data?.map((item) => item.organisation);
+    // console.log({organizationOnlyArray});
+    const statusArray = [
         {
-            value: 'lendsqr',
-            label: 'lendqr'
-        }
+            value: 'active',
+            label: 'active'
+        },
+        {
+            value: 'inactive',
+            label: 'inactive'
+        },
+        {
+            value: 'pending',
+            label: 'pending'
+        },
+        {
+            value: 'blacklisted',
+            label: 'blacklisted'
+        },
     ]
     return (
         <section className={styles.filter}>
             <div className={styles.filter__item}>
                 <p className={styles.filter__item_name}>Organisation</p>
-                <Select placeholder='select' onChange={((data) => { setSelect(data?.value) })} options={organisations} />
+                <Select placeholder='select' onChange={((data: any) => { setSelect(data?.value) })} options={organisation} />
             </div>
             <div className={styles.filter__item}>
                 <p className={styles.filter__item_name}>Username</p>
@@ -48,8 +68,12 @@ const FilterModal = ({ setFilterModal, setUsers }: any) => {
                 <DatePicker placeholderText='Date' className={styles.filter__input} selected={startDate} onChange={(date: any) => setStartDate(date)} />
             </div>
             <div className={styles.filter__item}>
+                <p className={styles.filter__item_name}>Phone</p>
+                <Input className={styles.filter__input} placeholder='Phone' name={''} onChange={((e: any) => setPhone(e.target.value))} />
+            </div>
+            <div className={styles.filter__item}>
                 <p className={styles.filter__item_name}>Status</p>
-                <Select placeholder='Select' options={organisations} />
+                <Select placeholder='Select' options={statusArray} />
             </div>
             <div className={styles.filter__buttons}>
                 <Button className={styles.reset_button} text='Reset' onClick={() => setFilterModal(false)} />

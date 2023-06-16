@@ -6,22 +6,29 @@ import { GroupProfileIcon, TwoProfilesIcon, DocumentIcon, DatabaseIcon } from ".
 import UsersTable from "./sections/UsersTable";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-
+import { useUsersQuery } from "@/redux/services/users";
+import { getLocalStorageItem } from "@/helpers/localStorage";
 
 const Dashboard = () => {
+    const { data } = useUsersQuery()
     const router = useRouter()
-    const token = localStorage.getItem("token");
 
-    const userJson = localStorage.getItem("user");
+
+    // const token = localStorage.getItem("token");
+
+
+const token = getLocalStorageItem('token');
+
+    const userJson = getLocalStorageItem("user");
     const user = userJson ? JSON.parse(userJson) : null;
-    
+
     useEffect(() => {
         if (!token) {
             router.push('/login',
 
                 {
                     query: {
-                        redirectTo:router.pathname
+                        redirectTo: router.pathname
 
                     }
                 })
@@ -29,18 +36,22 @@ const Dashboard = () => {
 
     }
         , [])
+
+    const filteredArray = data
+        ?.filter((item) => item.status === 'active')
+
     const userRecords = [
         {
             icon: <TwoProfilesIcon />,
             text: "Users",
-            values: 2453,
+            values: `${data?.length}`,
             background: "#e018ff1c"
 
         },
         {
             icon: <GroupProfileIcon />,
             text: "Active Users",
-            values: 2453,
+            values: `${filteredArray?.length}`,
             background: "#5618ff25"
         },
         {
@@ -66,7 +77,7 @@ const Dashboard = () => {
                     <div className={styles.users} >
                         <h1 className={styles.users__title}>Users</h1>
                         <div className={styles.users__records}>
-                            {userRecords.map((record, index) => {
+                            {filteredArray && userRecords.map((record, index) => {
                                 return (
                                     <UserRecordCount key={index} background={record.background} icon={record.icon} text={record.text} count={record.values} />
                                 )
