@@ -20,7 +20,7 @@ jobs:
         run: npm ci
 
       - name: Run tests and collect coverage
-        run: npm run test -- --coverage
+        run: npm run coverage -- --coverage
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v2
