@@ -35,9 +35,9 @@ const Login = () => {
         try {
             const res = await axios.post("http://localhost:4000/login", data);
             toast.success("Logged successfully")
-            localStorage.setItem("user", JSON.stringify(res.data.user.email));
+            localStorage.setItem("user", JSON.stringify(res.data.user));
             localStorage.setItem("token", res.data.accessToken);
-            router.push("/dashboard")
+            router.push(router.query.redirectTo as string || '/dashboard')
         } catch (error) {
             console.error(error);
         }

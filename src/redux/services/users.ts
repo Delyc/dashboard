@@ -8,6 +8,7 @@ export default interface UserInterface {
             username: string,
             dateJoined: Date,
             status: string,
+            isDeleted: false
         }[]
 
     }
@@ -19,7 +20,7 @@ export const allUsers = createApi({
         baseUrl: 'http://localhost:4000',
     }),
     endpoints: (builder) => ({
-        users: builder.query<UserInterface, void>({
+        users: builder.query<UserInterface[], void>({
             query: () => `/users`
         }),
     })

@@ -6,8 +6,20 @@ import Button from "../ui/Button";
 import { DownArrow, Notification, Search } from "../ui/Svgs";
 import styles from '../../styles/Home.module.scss';
 import Link from "next/link";
-
+import { useRouter } from "next/router";
+import {toast} from'react-toastify'
 const Navbar = () => {
+    const router = useRouter()
+    const userJson = localStorage.getItem("user");
+    const user = userJson ? JSON.parse(userJson) : null;
+
+    const handleLogout = () => {
+        toast.success("Logged out successfully")
+        localStorage.removeItem("user")
+        localStorage.removeItem("token")
+        window.location.reload();
+    }
+
     return (
         <section className={styles.nav}>
             <Image src={logo} alt=" logo" height={30} width={115} />
@@ -20,15 +32,16 @@ const Navbar = () => {
                     <Link href="">Docs</Link>
                     <Notification />
                     <div className={styles.nav__user}>
-                        <p>Delyce</p>
-                        <DownArrow />
+                        <p>{user?.username}</p>
+                        <div onClick={handleLogout}>
+                            <DownArrow />
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     );
 }
-
 export default Navbar;
 
 

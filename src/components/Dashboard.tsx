@@ -4,8 +4,31 @@ import styles from '../styles/Home.module.scss';
 import UserRecordCount from "./cards/UserRecordCount";
 import { GroupProfileIcon, TwoProfilesIcon, DocumentIcon, DatabaseIcon } from "./ui/Svgs";
 import UsersTable from "./sections/UsersTable";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+
 
 const Dashboard = () => {
+    const router = useRouter()
+    const token = localStorage.getItem("token");
+
+    const userJson = localStorage.getItem("user");
+    const user = userJson ? JSON.parse(userJson) : null;
+    
+    useEffect(() => {
+        if (!token) {
+            router.push('/login',
+
+                {
+                    query: {
+                        redirectTo:router.pathname
+
+                    }
+                })
+        }
+
+    }
+        , [])
     const userRecords = [
         {
             icon: <TwoProfilesIcon />,

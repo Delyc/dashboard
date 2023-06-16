@@ -5,7 +5,7 @@ import Link from "next/link"
 import styles from '../../styles/Home.module.scss'
 import { ActivateUser, Eye, ThreeDots, UserBlacklit } from "../ui/Svgs"
 import Button from "../ui/Button"
-const User = ({ user }: any) => {
+const User = ({ user,refetch }: any) => {
     const [show, setShow] = useState(false)
     const [status, setStatus] = useState(user.status)
     const editStatus = () => {
@@ -20,6 +20,7 @@ const User = ({ user }: any) => {
                 status: value,
                 password: user.password
             })
+            refetch()
     }
 
     return (
