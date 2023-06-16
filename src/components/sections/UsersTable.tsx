@@ -14,7 +14,6 @@ const UsersTable = () => {
     const [users, setUsers] = useState(data);
     useEffect(()=>{
         setUsers(data)
-        console.log("000")
     },[data])
     const showFilterModal = (e: any) => {
         e.preventDefault()

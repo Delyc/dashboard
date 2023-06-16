@@ -77,8 +77,8 @@ const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
                 <Select placeholder='Select' options={statusArray} />
             </div>
             <div className={styles.filter__buttons}>
-                <Button className={styles.reset_button} text='Reset' onClick={() => submitReset()} />
-                <Button className={styles.filter_button} text='Filter' onClick={(() => submitFiter())} />
+                <Button data-testid='reset-button' className={styles.reset_button} name='ting' text='Reset' onClick={() => submitReset()} />
+                <Button data-testid='filter-button' className={styles.filter_button} text='Filter' onClick={(() => submitFiter())} />
             </div>
         </section>
     );

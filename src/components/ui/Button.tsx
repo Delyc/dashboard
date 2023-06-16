@@ -4,12 +4,14 @@ interface Props {
     icon?: any,
     hasIcon?: boolean,
     onClick?: any,
-    type?: any
+    type?: any,
+    data_testid ?: string,
+    name?: string
 
 }
-const Button = ({ text, className, icon, onClick, type }: Props) => {
+const Button = ({ text, name, className, icon, onClick, type, data_testid }: Props) => {
     return (
-        <button type={type} onClick={onClick} className={className}>{text} {icon}</button>
+        <button name={name} data-testid={data_testid} type={type} onClick={onClick} className={className}>{text} {icon}</button>
     );
 }
 export default Button;
