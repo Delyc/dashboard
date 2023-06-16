@@ -6,13 +6,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from 'react';
 import axios from 'axios';
-import { useUsersQuery } from '@/redux/services/users';
 
 const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
-
-
-    console.log("filtyer")
-    console.log("test hhh", organisation)
     const [select, setSelect] = useState<string | undefined>()
     const [email, setEmail] = useState()
     const [username, setUsername] = useState()
@@ -28,9 +23,15 @@ const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
         setFilterModal(false)
     }
 
+    const submitReset = async () => {
+        try {
+            const res = await axios.get(`http://localhost:4000/users`);
+            setUsers(res.data)
+        } catch (error) {
+        }
+        setFilterModal(false)
+    }
 
-    //     const organizationOnlyArray = data?.map((item) => item.organisation);
-    // console.log({organizationOnlyArray});
     const statusArray = [
         {
             value: 'active',
@@ -76,7 +77,7 @@ const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
                 <Select placeholder='Select' options={statusArray} />
             </div>
             <div className={styles.filter__buttons}>
-                <Button className={styles.reset_button} text='Reset' onClick={() => setFilterModal(false)} />
+                <Button className={styles.reset_button} text='Reset' onClick={() => submitReset()} />
                 <Button className={styles.filter_button} text='Filter' onClick={(() => submitFiter())} />
             </div>
         </section>

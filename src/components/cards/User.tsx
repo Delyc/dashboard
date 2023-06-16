@@ -31,8 +31,9 @@ const User = ({ user,refetch }: any) => {
             <td className={styles.table__data}>{user.email}</td>
             <td className={styles.table__data}>{user.phone}</td>
             <td className={styles.table__data}>{user.dateJoined}</td>
-            <td style={{ display: "flex", gap: "5px", justifyContent: "space-between", position: "relative" }} className={styles.table__data}>
-                {status}
+            <td  style={{ display: "flex", gap: "5px", justifyContent: "space-between", position: "relative"}} className={styles.table__data}>
+               
+               <p className={styles.table__data_status} style={{backgroundColor:status === 'active' ? "#39cd6317" : status === "pending" ? "#e9b30021": status === "Inactive"?"#545f7d17":"#e4033b23", color:status === 'active' ? "green" : status === "pending" ? "#E9B200": status === "Inactive"?"#545F7D":"#E4033B"}}>{status} </p> 
                 {
                     (user.email === JSON.parse(localStorage.getItem('user')!) || user.username === "delyce") && <td>
                         {

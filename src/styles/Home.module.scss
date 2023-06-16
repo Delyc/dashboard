@@ -221,6 +221,7 @@ $cyan: #39CDCC;
   width: 100%;
   z-index: 50;
   font-family: $font-family-work-sans;
+
 }
 
 .menu{
@@ -448,10 +449,24 @@ $cyan: #39CDCC;
   padding: 0 23px;
   position: relative;
 }
+.table__data_status{
+  font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+/* identical to box height */
 
+text-align: center;
+border-radius: 100px;
+width: 100px;
+height: 30px;
+padding: 6px 6px;
+display: grid;
+place-content: center;
+}
 .table__button {
   border: none;
   background-color: white;
+
 }
 
 .table__row_button {
