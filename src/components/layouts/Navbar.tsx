@@ -7,12 +7,18 @@ import { DownArrow, Notification, Search } from "../ui/Svgs";
 import styles from '../../styles/Home.module.scss';
 import Link from "next/link";
 import { useRouter } from "next/router";
-import {toast} from'react-toastify'
+import { toast } from 'react-toastify'
+import { useState } from "react";
+import { Logout } from "../ui/Svgs";
 const Navbar = () => {
     const router = useRouter()
     const userJson = localStorage.getItem("user");
     const user = userJson ? JSON.parse(userJson) : null;
+    const [showMenu, setShowMenu] = useState(false)
 
+    const handleShowMenu = () => {
+        setShowMenu(!showMenu)
+    }
     const handleLogout = () => {
         toast.success("Logged out successfully")
         localStorage.removeItem("user")
@@ -33,9 +39,14 @@ const Navbar = () => {
                     <Notification />
                     <div className={styles.nav__user}>
                         <p>{user?.username}</p>
-                        <div onClick={handleLogout}>
+                        <div onClick={handleShowMenu}>
                             <DownArrow />
-                        </div>
+                            {showMenu && <div className={styles.menu}>
+                            <p onClick={handleLogout}><Logout /> Logout</p>
+                        </div>}
+                        </div> 
+
+                       
                     </div>
                 </div>
             </div>

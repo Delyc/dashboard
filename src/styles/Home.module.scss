@@ -223,6 +223,27 @@ $cyan: #39CDCC;
   font-family: $font-family-work-sans;
 }
 
+.menu{
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid #21407d48;
+  box-shadow: #21407d3b;
+  position: absolute;
+  right: 130px;
+  margin-top: 10px;
+
+}
+
+.menu{
+  p{
+    color: $dark-blue;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
 .nav__details {
   width: 73%;
   margin-right: 100px;
