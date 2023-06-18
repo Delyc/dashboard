@@ -1,7 +1,13 @@
 import Link from "next/link";
 import styles from '../../../styles/Home.module.scss'
 
-const SidebarItem = ({ icon, text, href }: any) => {
+
+interface Props{
+    icon: string,
+    text: string,
+    href: string
+}
+const SidebarItem = ({ icon, text, href }: Props) => {
     return (
         <Link href=""  className={styles.sidebarList__item}>{icon} {text}</Link>
     );

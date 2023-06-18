@@ -8,6 +8,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
+    const baseUrl = process.env.NEXT_PUBLIC_BASEURL
     const [select, setSelect] = useState<string | undefined>()
     const [email, setEmail] = useState()
     const [username, setUsername] = useState()
@@ -16,7 +17,7 @@ const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
     const [startDate, setStartDate] = useState(new Date());
     const submitFiter = async () => {
         try {
-            const res = await axios.get(`http://localhost:4000/lendUsers?isDelete=false${select ? `&organisationName=${select}` : ""}${email ? `&email=${email}` : ""}${username ? `&username=${username}` : ""}${phone ? `&phone=${phone}` : ""}${dateJoined ? `&dateJoined=${dateJoined}` : ""}${status ? `&status=${status}` : ""}`);
+    const res = await axios.get(`${baseUrl}?isDelete=false${select ? `&organisationName=${select}` : ""}${email ? `&email=${email}` : ""}${username ? `&username=${username}` : ""}${phone ? `&phone=${phone}` : ""}${dateJoined ? `&dateJoined=${dateJoined}` : ""}${status ? `&status=${status}` : ""}`);
             setUsers(res.data)
         } catch (error) {
         }
@@ -25,7 +26,7 @@ const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
 
     const submitReset = async () => {
         try {
-            const res = await axios.get(`http://localhost:4000/lendUsers`);
+            const res = await axios.get(`${baseUrl}/lendUsers`);
             setUsers(res.data)
         } catch (error) {
         }

@@ -1,11 +1,11 @@
 interface Props {
-    icon: any,
+    icon: string,
     text: string,
-    count: any;
+    count: string;
     background: string;
 }
 import styles from '../../styles/Home.module.scss'
-const UserRecordCount = ({ icon, text, count, background }: Props) => {
+const UserRecordCount = ({ icon, text, count, background }: any) => {
     return (
         <article className={styles.record}>
             <div style={{

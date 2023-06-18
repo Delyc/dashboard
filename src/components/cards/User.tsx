@@ -25,6 +25,9 @@ const User = ({ user,refetch }: any) => {
             setShow(false)
     }
 
+
+  
+
     return (
         <tr className={styles.table__row}>
             <td className={styles.table__data}>{user.organisationName}</td>

@@ -2,7 +2,7 @@ import styles from '../../../styles/Home.module.scss'
 import SidebarItem from './SidebarItem';
 
 interface Props {
-    category: any,
+    category: [],
     title: string
 }
 const SidebarCategory = ({ category, title }: Props) => {
@@ -10,9 +10,9 @@ const SidebarCategory = ({ category, title }: Props) => {
         <section className={styles.sidebar_section}>
             <h3 className={styles.sidebarList_category}>{title}</h3>
             <ul className={styles.sidebarList}>
-                {category.map((item: any, index: any) => {
+                {category.map((item: { icon: string; text: string }, index: number) => {
                     return (
-                        <SidebarItem key={index} icon={item.icon} text={item.text} />
+                        <SidebarItem key={index} icon={item.icon} text={item.text} href={''} />
                     )
                 })}
             </ul>

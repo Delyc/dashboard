@@ -1,5 +1,11 @@
 import styles from '../../styles/Home.module.scss'
-const Socials = ({twitter, facebook, instagram}: any) => {
+
+interface Props{
+    twitter: string,
+    facebook: string,
+    instagram: string
+}
+const Socials = ({twitter, facebook, instagram}: Props) => {
     return (
         <section className={styles.user__info_wrapper}>
             <h1>Socialss</h1>

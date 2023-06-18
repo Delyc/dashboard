@@ -20,7 +20,7 @@ interface LoginPayload {
 
 const Login = () => {
     const baseUrl = process.env.NEXT_PUBLIC_BASEURL
-    const [showPassword, setShowPassword] = useState<any>(false);
+    const [showPassword, setShowPassword] = useState<boolean>(false);
     const handleTogglePassword = () => {
         setShowPassword(!showPassword);
     };
@@ -29,7 +29,7 @@ const Login = () => {
         password: Yup.string().required("password is required"),
     });
     const formOptions = { resolver: yupResolver(validationSchema) };
-    const { register, handleSubmit, formState } = useForm(formOptions);
+    const { register, handleSubmit, formState } = useForm<LoginPayload>(formOptions);
     const { errors } = formState
     const router = useRouter()
 
@@ -45,7 +45,7 @@ const Login = () => {
         }
     };
 
-    const onSubmit = (data: any) => {
+    const onSubmit = (data: LoginPayload) => {
         const loginData = {
             email: data.email,
             password: data.password,
@@ -78,7 +78,6 @@ const Login = () => {
                         <p className={styles.login__forgotPassword}>Forgot PASSWORD?</p>
                         <Button text="log in" className={styles.register__button} type='submit' />
                         <p>Don{"'"}t have an account ? <Link href="/">Register</Link></p>
-                   
                     </form>
                 </div>
             </div>

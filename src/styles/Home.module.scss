@@ -814,7 +814,30 @@ $cyan: #39CDCC;
 }
 
 
+//pagination
 
+.paginate{
+  display: flex;
+  justify-content: space-between;
+}
+.paginate__pages{
+  display: flex;
+  gap: 0.9375rem;
+}
+.paginate__page{
+  border: none;
+  background-color: $background;
+  color: $text-color;
+  font-size: 1rem;
+}
+
+.nextPrev{
+  background-color: #213F7D1A;
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+}
 
 
 //respoonsiveness
