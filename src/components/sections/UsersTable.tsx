@@ -47,6 +47,7 @@ const UsersTable = () => {
 
   return (
     <>
+    <div className={styles.scroll__table}>
       <table className={styles.table}>
         <thead className={styles.table__heading}>
           <tr className={styles.table__row}>
@@ -72,6 +73,7 @@ const UsersTable = () => {
           })}
         </tbody>
       </table>
+      </div>
 
       <Pagination
         currentPage={currentPage}

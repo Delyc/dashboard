@@ -106,7 +106,7 @@ const Sidebar = () => {
 
     return (
         <section className={styles.sidebar}>
-            <div onClick={handleShow} style={{position: "fixed", background:"white", width: "50%", marginTop:"-1.3rem"}}>
+            <div onClick={handleShow} className={styles.table_menu} style={{position: "fixed", background:"white", width: "50%", marginTop:"-1.3rem"}}>
                 <Burger />
             </div>
           {showSidebar &&
