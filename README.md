@@ -9,6 +9,9 @@ This is a frontend application that allows admin to register, login, and view a 
 This project has been deployed on Netlify. Check the link below to test the features:
 - [LEndsqr Frontend](https://delyce-lendsqr-fe-test.netlify.app/)
 
+## Documentation
+live documentation with navigation accessible at https://delyc.github.io/lendsqr-fe-test/
+
 ## Technologies
 - Next.js (React.js framework)
 - TypeScript
