@@ -29,7 +29,7 @@ const User = ({ user,refetch }: any) => {
   
 
     return (
-        <tr className={styles.table__row}>
+        <tr className={`${styles.table__row} ${styles.table__row_mobile}`}>
             <td className={styles.table__data}>{user.organisationName}</td>
             <td className={styles.table__data}>{user.username}</td>
             <td className={styles.table__data}>{user.email}</td>

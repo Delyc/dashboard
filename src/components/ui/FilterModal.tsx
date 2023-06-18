@@ -15,10 +15,13 @@ const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
     const [dateJoined, setDateJoined] = useState()
     const [phone, setPhone] = useState()
     const [startDate, setStartDate] = useState(new Date());
-    const submitFiter = async () => {
+    const submitFiter = async (e: any) => {
+        e.preventDefault()
         try {
     const res = await axios.get(`${baseUrl}?isDelete=false${select ? `&organisationName=${select}` : ""}${email ? `&email=${email}` : ""}${username ? `&username=${username}` : ""}${phone ? `&phone=${phone}` : ""}${dateJoined ? `&dateJoined=${dateJoined}` : ""}${status ? `&status=${status}` : ""}`);
-            setUsers(res.data)
+           console.log("res", res)
+    
+    setUsers(res.data)
         } catch (error) {
         }
         setFilterModal(false)
@@ -79,7 +82,7 @@ const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
             </div>
             <div className={styles.filter__buttons}>
                 <Button data-testid='reset-button' className={styles.reset_button} name='ting' text='Reset' onClick={() => submitReset()} />
-                <Button data-testid='filter-button' className={styles.filter_button} text='Filter' onClick={(() => submitFiter())} />
+                <Button data-testid='filter-button' className={styles.filter_button} text='Filter' onClick={((e: any) => submitFiter(e))} />
             </div>
         </section>
     );

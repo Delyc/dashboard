@@ -7,7 +7,7 @@ interface Props{
     text: string,
     href: string
 }
-const SidebarItem = ({ icon, text, href }: Props) => {
+const SidebarItem = ({ icon, text, href }: any) => {
     return (
         <Link href=""  className={styles.sidebarList__item}>{icon} {text}</Link>
     );

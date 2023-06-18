@@ -1,9 +1,15 @@
-import { AuditIcon, Briefcase, DecisionIcon, FeesChargesIcon, FeesPricingIcon, Home, KarmaIcon, LoanRequestIcon, LoansIcon, OrganisationIcon, PreferencesIcon, ReportIcon, SavingsIcon, SavingsProductIcon, ServiceAccountIcon, ServicesIcon, SettlementsIcon, TransactionsIcon, UserFriends, Users, WhitelistIcon } from "../../ui/Svgs";
+import { AuditIcon, Briefcase, Burger, DecisionIcon, FeesChargesIcon, FeesPricingIcon, Home, KarmaIcon, LoanRequestIcon, LoansIcon, OrganisationIcon, PreferencesIcon, ReportIcon, SavingsIcon, SavingsProductIcon, ServiceAccountIcon, ServicesIcon, SettlementsIcon, TransactionsIcon, UserFriends, Users, WhitelistIcon } from "../../ui/Svgs";
 import SidebarCategory from "./SidebarCategory";
 import styles from '../../../styles/Home.module.scss'
 import SidebarItem from "./SidebarItem";
+import { useState } from "react";
 
 const Sidebar = () => {
+
+    const [showSidebar, setShowSidebar] = useState(true)
+    const handleShow = () => {
+        setShowSidebar(!showSidebar)
+    }
 
     const customerItems = [
         {
@@ -100,11 +106,19 @@ const Sidebar = () => {
 
     return (
         <section className={styles.sidebar}>
+            <div onClick={handleShow} style={{position: "fixed", background:"white", width: "50%", marginTop:"-1.3rem"}}>
+                <Burger />
+            </div>
+          {showSidebar &&
+          <>
             <SidebarItem icon={<Briefcase />} text="switch organisatin" />
             <SidebarItem icon={<Home />} text="Dashboard" />
             <SidebarCategory category={customerItems} title={"customers"} />
             <SidebarCategory category={businessesItems} title={"businesses"} />
             <SidebarCategory category={settingsItems} title={"Settings"} />
+          </> 
+
+        }
         </section>
     );
 }

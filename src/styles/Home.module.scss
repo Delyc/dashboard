@@ -890,6 +890,18 @@ $cyan: #39CDCC;
   }
 
   //dashboard
+
+  .container_wrapper{
+    // background-color: yellow;
+    width: 100%;
+  }
+  .sidebar{
+    padding:  1.25rem;
+    width: 50%;
+    position: absolute;
+    background-color: white;
+    z-index: 50;
+  }
   .nav__profile {
     gap: 0.625rem;
   }
@@ -899,6 +911,64 @@ $cyan: #39CDCC;
     width: 12.5rem;
   }
 
+  .users__records{
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+
+  }
+
+  .user__title{
+    font-size: 0.75rem;
+  }
+
+  .user__count{
+    font-size: 1.25rem;
+  }
+
+  .table__heading {
+ display: flex;
+ overflow-x: scroll;
+ width: 15rem;
+ padding: 0;
+  }
+
+  .table__header{
+    padding: 0 1rem;
+  }
+  .table__data{
+    display: flex;
+    align-items: center;
+    border: none;
+    
+  }
+
+  .table__body{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+  }
+  .table__row_mobile{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+padding : 0;
+  }
+  .record{
+    padding: 15px;
+  }
+
+  .users{
+    padding: 1.875rem;
+  }
+  .scroll__table{
+    overflow-x: auto;
+
+  }
+  .table{
+    overflow: scroll;
+    width: 10rem;
+  }
   .personal_info {
     display: flex;
     flex-direction: column;

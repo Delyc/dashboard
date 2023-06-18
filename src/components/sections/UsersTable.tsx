@@ -35,9 +35,8 @@ const UsersTable = () => {
   // Pagination
   const indexOfLastUser = currentPage * itemsPerPage;
   const indexOfFirstUser = indexOfLastUser - itemsPerPage;
-  const currentUsers = users?.slice(indexOfFirstUser, indexOfLastUser);
+  const currentUsers = users && users?.slice(indexOfFirstUser, indexOfLastUser);
   const totalUsers = users?.length;
-
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -65,13 +64,15 @@ const UsersTable = () => {
         </thead>
         <tbody className={styles.table__body}>
           {filterModal && <FilterModal organisation={organizationArray} setUsers={setUsers} setFilterModal={setFilterModal} />}
-          {currentUsers && currentUsers.map((user: any, index: any) => {
+          {currentUsers && currentUsers?.map((user: any, index: any) => {
+            console.log("tetsds", user)
             return (
               <User refetch={refetch} key={index} user={user} />
             )
           })}
         </tbody>
       </table>
+
       <Pagination
         currentPage={currentPage}
         totalItems={totalUsers || 0}
