@@ -45,7 +45,12 @@ to be able to test different features, you need to have backend running locally 
     ```shell
     npm install
     ```
-
+3. Configur environoment variables
+   check `.env.example` file and replace `backend_url` with backend server. Using backend given , In this case it will be
+   ```
+   NEXT_PUBLIC_BASEURL=http://localhost:4000
+   ```
+   
 3. Run development server
     ```shell
     npm run dev
