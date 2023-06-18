@@ -16,7 +16,7 @@ const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
     const [startDate, setStartDate] = useState(new Date());
     const submitFiter = async () => {
         try {
-            const res = await axios.get(`http://localhost:4000/users?isDelete=false${select ? `&organisationName=${select}` : ""}${email ? `&email=${email}` : ""}${username ? `&username=${username}` : ""}${phone ? `&phone=${phone}` : ""}${dateJoined ? `&dateJoined=${dateJoined}` : ""}${status ? `&status=${status}` : ""}`);
+            const res = await axios.get(`http://localhost:4000/lendUsers?isDelete=false${select ? `&organisationName=${select}` : ""}${email ? `&email=${email}` : ""}${username ? `&username=${username}` : ""}${phone ? `&phone=${phone}` : ""}${dateJoined ? `&dateJoined=${dateJoined}` : ""}${status ? `&status=${status}` : ""}`);
             setUsers(res.data)
         } catch (error) {
         }
@@ -25,7 +25,7 @@ const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
 
     const submitReset = async () => {
         try {
-            const res = await axios.get(`http://localhost:4000/users`);
+            const res = await axios.get(`http://localhost:4000/lendUsers`);
             setUsers(res.data)
         } catch (error) {
         }

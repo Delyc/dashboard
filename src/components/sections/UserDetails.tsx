@@ -2,16 +2,30 @@ import Button from "../ui/Button";
 import styles from '../../styles/Home.module.scss'
 import { BigProfile, ColoredStar, Star } from "../ui/Svgs";
 import Link from "next/link";
-const UserDetails = () => {
-    const userNavigation = ["General Deatils", "Documents", "Bank Details", "Loans", "Savings", "App and System"]
+import { useState } from "react";
+import { toast } from "react-toastify";
+import axios from "axios";
 
+const UserDetails = ({user, refetch}: any) => {
+    const [status, setStatus] = useState(user?.status)
+    const userNavigation = ["General Deatils", "Documents", "Bank Details", "Loans", "Savings", "App and System"]
+    const onChangeStatus = (value: string) => {
+        console.log("alue", value)
+        setStatus(value)
+        toast.success("User status updated")
+        axios.patch(`http://localhost:4000/lendUsers/${user.id}`,
+            {
+                status: value,
+            })
+            // refetch()
+    }
     return (
         <div className={styles.user__details}>
             <div className={styles.user__actions}>
                 <h3>Users Details</h3>
                 <div className={styles.user__actions_buttons}>
-                    <Button className={styles.user__blacklist} text='blacklist user' />
-                    <Button className={styles.user__activate} text='activate user' />
+                    <Button onClick={() => onChangeStatus("Blacklist user")} className={styles.user__blacklist} text='blacklist user' />
+                    <Button  onClick={() => onChangeStatus("active")}  className={styles.user__activate} text='activate user' />
                 </div>
             </div>
 

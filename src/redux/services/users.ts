@@ -23,7 +23,7 @@ export const allUsers = createApi({
     }),
     endpoints: (builder) => ({
         users: builder.query<UserInterface[], void>({
-            query: () => `/users`
+            query: () => `/lendUsers`
         }),
     })
 })
