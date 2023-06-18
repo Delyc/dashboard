@@ -20,27 +20,27 @@ $lime: #39CD62;
 $cyan: #39CDCC;
 
 %button_shared {
-  padding: 14px 0;
-  font-size: 14px;
+  padding: 0.875rem 0;
+  font-size: 0.875rem;
   font-weight: 600;
-  border-radius: 8px
+  border-radius: 0.5rem
 }
 
 %input-shared {
-  border: 2px solid rgba(84, 95, 125, 0.15);
-  border-radius: 5px;
-  padding: 17px 16px;
+  border: 0.125rem solid rgba(84, 95, 125, 0.15);
+  border-radius: 0.3125rem;
+  padding: 1.0625rem 1rem;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
   color: $text-color;
   outline: none
 }
 
 %sidebar_category_title {
   font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
   color: #545F7D;
   text-transform: uppercase
 }
@@ -54,11 +54,11 @@ $cyan: #39CDCC;
   background-color: $cyan;
   border: none;
   color: white;
-  width: 447px;
+  width: 27.9375rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  line-height: 19px;
-  margin-top: 6px;
+  line-height: 1.1875rem;
+  margin-top: 0.375rem;
 
 }
 
@@ -78,8 +78,8 @@ $cyan: #39CDCC;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  padding: 0 100px;
-  gap: 70px;
+  padding: 0 6.25rem;
+  gap: 4.375rem;
   font-family: $font-family-work-sans;
 }
 
@@ -88,8 +88,8 @@ $cyan: #39CDCC;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  padding: 0 100px;
-  gap: 70px;
+  padding: 0 6.25rem;
+  gap: 4.375rem;
   font-family: $font-family-work-sans;
 }
 
@@ -106,8 +106,8 @@ $cyan: #39CDCC;
 
 .logo_image {
   position: absolute;
-  padding-left: 30px;
-  padding-top: 20px;
+  padding-left: 1.875rem;
+  padding-top: 1.25rem;
 }
 
 .login__image_section {
@@ -119,42 +119,42 @@ $cyan: #39CDCC;
 .login__image {
   position: absolute;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 
 .login__form_section {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 3.75rem;
   width: 50%;
 }
 
 .login__content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .login__heading {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 55px;
+  font-size: 2.5rem;
+  line-height: 3.4375rem;
   letter-spacing: -0.04em;
   color: $dark-blue;
 }
 
 .login__description {
   font-weight: 400;
-  font-size: 20px;
-  line-height: 27px;
+  font-size: 1.25rem;
+  line-height: 1.6875rem;
   color: $text-color;
 }
 
 .login__form {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  width: 447px;
+  gap: 0.875rem;
+  width: 27.9375rem;
 }
 
 .input_group {
@@ -167,8 +167,8 @@ $cyan: #39CDCC;
   background-color: $cyan;
   border: none;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -180,8 +180,8 @@ $cyan: #39CDCC;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .login__show {
@@ -194,11 +194,11 @@ $cyan: #39CDCC;
 
 .login__showPassword {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 1.25rem;
+  right: 1.25rem;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.75rem;
+  line-height: 1rem;
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -215,7 +215,7 @@ $cyan: #39CDCC;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 1.25rem 1.875rem;
   background-color: white;
   position: fixed;
   width: 100%;
@@ -224,39 +224,39 @@ $cyan: #39CDCC;
 
 }
 
-.menu{
+.menu {
   background-color: white;
-  border-radius: 5px;
-  padding: 20px;
-  border: 1px solid #21407d48;
+  border-radius: 0.3125rem;
+  padding: 1.25rem;
+  border: 0.0625rem solid #21407d48;
   box-shadow: #21407d3b;
   position: absolute;
-  right: 130px;
-  margin-top: 10px;
+  right: 8.125rem;
+  margin-top: 0.625rem;
 
 }
 
-.menu{
-  p{
+.menu {
+  p {
     color: $dark-blue;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.3125rem;
   }
 }
 
 .nav__details {
   width: 73%;
-  margin-right: 100px;
+  margin-right: 6.25rem;
   display: flex;
   justify-content: space-between;
 }
 
 .nav__search {
-  border: 1px solid #21407d48;
-  border-radius: 8px;
-  height: 40px;
-  width: 400px;
+  border: 0.0625rem solid #21407d48;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  width: 25rem;
   display: flex;
 }
 
@@ -264,27 +264,27 @@ $cyan: #39CDCC;
   @extend %input-shared;
   border: none;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   font-family: $font-family-work-sans;
 }
 
 .nav__button {
   @extend %button_shared;
-  width: 56px;
+  width: 3.5rem;
   background-color: $cyan;
   border: none;
 }
 
 .nav__profile {
   display: flex;
-  gap: 50px;
+  gap: 3.125rem;
   align-items: center;
 }
 
 .nav__user {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .container_wrapper {
@@ -293,10 +293,10 @@ $cyan: #39CDCC;
 }
 
 .sidebar {
-  padding: 120px 30px;
+  padding: 7.5rem 1.875rem;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.875rem;
   background-color: white;
   width: 15%;
   font-family: $font-family-work-sans;
@@ -305,7 +305,7 @@ $cyan: #39CDCC;
 .sidebar_section {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .sidebarList_category {
@@ -314,85 +314,85 @@ $cyan: #39CDCC;
 
 .wrapper {
   background-color: yellow;
-  padding: 100px;
+  padding: 6.25rem;
 }
 
 
 .sidebarList {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .sidebarList__item {
   display: flex;
-  gap: 10px;
-  padding: 10px 0;
+  gap: 0.625rem;
+  padding: 0.625rem 0;
   align-items: center;
   text-decoration: none;
   color: $dark-blue;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
 }
 
 
 .users {
-  padding: 60px;
-  margin-top: 100px;
+  padding: 3.75rem;
+  margin-top: 6.25rem;
   width: 80%;
   font-family: $font-family-work-sans;
   display: flex;
   flex-direction: column;
-  gap: 40px
+  gap: 2.5rem
 }
 
 .users__title {
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
   color: $dark-blue;
 }
 
 .users__records {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
+  grid-gap: 1.875rem;
   width: 100%;
 }
 
 .record {
   background: #FFFFFF;
-  border: 1px solid rgba(33, 63, 125, 0.06);
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-  border-radius: 4px;
-  padding: 20px 30px;
+  border: 0.0625rem solid rgba(33, 63, 125, 0.06);
+  box-shadow: 0.1875rem 0.3125rem 1.25rem rgba(0, 0, 0, 0.04);
+  border-radius: 0.25rem;
+  padding: 1.25rem 1.875rem;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 0.875rem;
 }
 
 .icon_circle {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   display: grid;
   place-content: center;
 }
 
 .user__title {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.875rem;
+  line-height: 1rem;
   text-transform: uppercase;
   color: $text-color;
 }
 
 .user__count {
   font-weight: 600;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
   text-transform: uppercase;
   color: $dark-blue;
 }
@@ -402,67 +402,69 @@ $cyan: #39CDCC;
 .table {
   border-collapse: collapse;
   width: 100%;
-  padding: 30px !important;
+  padding: 1.875rem !important;
   background-color: white;
-  margin-top: 40px;
-  border: 1px solid rgba(33, 63, 125, 0.06);
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-  border-radius: 4px;
+  margin-top: 2.5rem;
+  border: 0.0625rem solid rgba(33, 63, 125, 0.06);
+  box-shadow: 0.1875rem 0.3125rem 1.25rem rgba(0, 0, 0, 0.04);
+  border-radius: 0.25rem;
 }
 
 .table__heading {
-  margin: 10px;
+  margin: 0.625rem;
   text-align: left;
 }
 
 .table__header {
-  padding: 30px;
+  padding: 1.875rem;
 }
 
 .test {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .table__header_name {
   font-weight: 600;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
   text-transform: uppercase;
   color: $text-color;
 }
 
 .table__row {
   border-collapse: collapse;
-  padding: 23px;
+  padding: 1.4375rem;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.875rem;
+  line-height: 1rem;
   color: $text-color;
 }
 
 .table__data {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 0.0625rem solid #ddd;
   text-align: left;
-  min-height: 50px;
-  padding: 0 23px;
+  min-height: 3.125rem;
+  padding: 0 1.4375rem;
   position: relative;
 }
-.table__data_status{
-  font-weight: 400;
-font-size: 14px;
-line-height: 16px;
-/* identical to box height */
 
-text-align: center;
-border-radius: 100px;
-width: 100px;
-height: 30px;
-padding: 6px 6px;
-display: grid;
-place-content: center;
+.table__data_status {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  /* identical to box height */
+
+  text-align: center;
+  border-radius: 6.25rem;
+  width: 6.25rem;
+  height: 1.875rem;
+  padding: 0.375rem 0.375rem;
+  display: grid;
+  place-content: center;
 }
+
 .table__button {
   border: none;
   background-color: white;
@@ -475,17 +477,17 @@ place-content: center;
 }
 
 .table__options {
-  right: 30px;
-  margin-top: 15px;
+  right: 1.875rem;
+  margin-top: 0.9375rem;
   background-color: white;
-  padding: 20px;
-  border: 1px solid rgba(84, 95, 125, 0.04);
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-  border-radius: 4px;
-  width: 130px;
+  padding: 1.25rem;
+  border: 0.0625rem solid rgba(84, 95, 125, 0.04);
+  box-shadow: 0.1875rem 0.3125rem 1.25rem rgba(0, 0, 0, 0.04);
+  border-radius: 0.25rem;
+  width: 8.125rem;
   z-index: 50;
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   flex-direction: column;
 }
 
@@ -497,49 +499,49 @@ place-content: center;
 .options__button {
   border: none;
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
   background-color: white;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: $font-family-work-sans;
-  line-height: 16px;
+  line-height: 1rem;
   text-decoration: none;
   color: #545F7D;
 }
 
 .filter {
-  padding: 30px 20px;
+  padding: 1.875rem 1.25rem;
   background-color: white;
-  width: 230px;
+  width: 14.375rem;
   position: absolute;
   z-index: 50;
-  border: 1px solid rgba(84, 95, 125, 0.14);
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-  border-radius: 4px;
-  margin-left: 20px;
+  border: 0.0625rem solid rgba(84, 95, 125, 0.14);
+  box-shadow: 0.1875rem 0.3125rem 1.25rem rgba(0, 0, 0, 0.04);
+  border-radius: 0.25rem;
+  margin-left: 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .filter__item {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 0.375rem;
 }
 
 .filter__item_name {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.875rem;
+  line-height: 1rem;
   color: $text-color;
 }
 
 .filter__input {
   @extend %input-shared;
   width: 80%;
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
 }
 
 .filter__buttons {
@@ -549,13 +551,13 @@ place-content: center;
 
 .reset_button {
   @extend %button_shared;
-  padding: 12px 30px;
+  padding: 0.75rem 1.875rem;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.875rem;
+  line-height: 1rem;
   color: $text-color;
-  width: 98px;
-  border: 1px solid #545F7D;
+  width: 6.125rem;
+  border: 0.0625rem solid #545F7D;
   background-color: white
 }
 
@@ -563,11 +565,11 @@ place-content: center;
   @extend %button_shared;
   background-color: $cyan;
   border: none;
-  padding: 12px 30px;
-  width: 98px;
+  padding: 0.75rem 1.875rem;
+  width: 6.125rem;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.875rem;
+  line-height: 1rem;
   color: #FFFFFF;
 }
 
@@ -577,14 +579,14 @@ place-content: center;
 .users__back {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .users__back {
   p {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1rem;
+    line-height: 1.1875rem;
     color: #545F7D;
   }
 }
@@ -592,7 +594,7 @@ place-content: center;
 .user__details {
   display: flex;
   flex-direction: column;
-  gap: 46px
+  gap: 2.875rem
 }
 
 .user__actions {
@@ -603,25 +605,25 @@ place-content: center;
 .user__actions {
   h3 {
     font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
     color: $dark-blue;
   }
 }
 
 .user__actions_buttons {
   display: flex;
-  gap: 20px
+  gap: 1.25rem
 }
 
 .user__blacklist {
   @extend %button_shared;
-  border: 1px solid #E4033B;
-  border-radius: 8px;
-  padding: 12px 16px;
+  border: 0.0625rem solid #E4033B;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.875rem;
+  line-height: 1rem;
   background-color: $background;
   text-align: center;
   letter-spacing: 0.1em;
@@ -630,12 +632,12 @@ place-content: center;
 }
 
 .user__activate {
-  border: 1px solid #39CDCC;
-  border-radius: 8px;
+  border: 0.0625rem solid #39CDCC;
+  border-radius: 0.5rem;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
-  padding: 12px 16px;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  padding: 0.75rem 1rem;
   background-color: $background;
   text-align: center;
   letter-spacing: 0.1em;
@@ -645,13 +647,13 @@ place-content: center;
 
 .user__info {
   background-color: white;
-  padding: 30px;
-  border: 1px solid rgba(33, 63, 125, 0.06);
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-  border-radius: 4px;
+  padding: 1.875rem;
+  border: 0.0625rem solid rgba(33, 63, 125, 0.06);
+  box-shadow: 0.1875rem 0.3125rem 1.25rem rgba(0, 0, 0, 0.04);
+  border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 3.125rem;
 }
 
 .user__info_details {
@@ -661,30 +663,30 @@ place-content: center;
 
 .user__info_identity {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   align-items: center;
-  border-right: 1px solid #545f7d3b;
-  padding-right: 30px;
+  border-right: 0.0625rem solid #545f7d3b;
+  padding-right: 1.875rem;
 }
 
 .user__info_names {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .user__info_names {
   h3 {
     font-weight: 500;
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 1.375rem;
+    line-height: 1.625rem;
     color: $dark-blue;
   }
 
   p {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 0.875rem;
+    line-height: 1rem;
     color: $text-color;
   }
 }
@@ -692,8 +694,8 @@ place-content: center;
 .user__info_profile {
   background-color: #21407d54;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
   display: grid;
   place-content: center;
 }
@@ -701,44 +703,44 @@ place-content: center;
 .user__info_tier {
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #545f7d3b;
-  gap: 12px;
-  padding: 0 30px
+  border-right: 0.0625rem solid #545f7d3b;
+  gap: 0.75rem;
+  padding: 0 1.875rem
 }
 
 .user__info_tier {
   p {
     font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 0.875rem;
+    line-height: 1rem;
     color: $text-color;
   }
 
   div {
     display: flex;
-    gap: 6px;
+    gap: 0.375rem;
   }
 }
 
 .user__info_account {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 0 30px
+  gap: 0.75rem;
+  padding: 0 1.875rem
 }
 
 .user__info_account {
   h3 {
     font-weight: 500;
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 1.375rem;
+    line-height: 1.625rem;
     color: $dark-blue;
   }
 
   p {
     font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
     color: $dark-blue;
   }
 }
@@ -750,31 +752,31 @@ place-content: center;
 
 .user__info_link {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
 }
 
 .user__fulldetails {
   background-color: white;
-  padding: 0 30px;
-  padding-bottom: 46px;
+  padding: 0 1.875rem;
+  padding-bottom: 2.875rem;
 }
 
 .user__info_wrapper {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  border-bottom: 1px solid #21407d3b;
-  padding: 30px 0;
+  gap: 1.875rem;
+  border-bottom: 0.0625rem solid #21407d3b;
+  padding: 1.875rem 0;
 }
 
 .user__info_wrapper {
   h1 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1rem;
+    line-height: 1.1875rem;
     color: $dark-blue;
   }
 }
@@ -782,29 +784,81 @@ place-content: center;
 .personal_info {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
-  
+  gap: 1.875rem;
+
 }
 
 .personal_info {
   div {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
   }
 
   h3 {
     font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
     text-transform: uppercase;
     color: $text-color;
   }
 
   p {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1rem;
+    line-height: 1.1875rem;
     color: $text-color;
+  }
+}
+
+
+
+
+
+//respoonsiveness
+
+@media (max-width: 36rem) {
+
+  //dashboard
+  .nav__profile {
+    gap: 0.625rem;
+  }
+
+  .nav__search {
+    width: 12.5rem;
+  }
+
+  .personal_info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user__details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user__info_profile {
+    width: 6.25rem;
+    height: 3.75rem;
+  }
+
+  .user__info_details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .user__info_nav {
+    overflow-y: scroll;
+  }
+}
+
+
+@media (min-width: 36rem) and (max-width: 47.9375rem) {
+
+  .personal_info {
+    background-color: red;
   }
 }

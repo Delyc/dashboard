@@ -36,7 +36,7 @@ const UserDetails = ({user, refetch}: any) => {
                             <BigProfile />
                         </div>
                         <div className={styles.user__info_names}>
-                            <h3>Grace Effiom</h3>
+                            <h3>{user?.fullName}</h3>
                             <p>LSQFf587g90</p>
                         </div>
                     </div>

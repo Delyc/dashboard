@@ -30,9 +30,6 @@ const User = ({refetch}: any) => {
     }, []);
 
 
-
-
-
     return (
         <section className={styles.dashboard}>
             <Navbar />
