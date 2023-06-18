@@ -11,6 +11,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 interface LoginPayload {
     email: string,
@@ -76,6 +77,8 @@ const Login = () => {
                         </div>
                         <p className={styles.login__forgotPassword}>Forgot PASSWORD?</p>
                         <Button text="log in" className={styles.register__button} type='submit' />
+                        <p>Don{"'"}t have an account ? <Link href="/">Register</Link></p>
+                   
                     </form>
                 </div>
             </div>

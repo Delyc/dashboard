@@ -114,6 +114,8 @@ $cyan: #39CDCC;
   position: relative;
   width: 40%;
   height: 70vh;
+  display: flex;
+  align-items: center;
 }
 
 .login__image {
@@ -819,10 +821,56 @@ $cyan: #39CDCC;
 
 @media (max-width: 36rem) {
 
+  //login and register
+  .container {
+    width: 100%;
+    padding: 5rem 3rem;
+  }
+
+  .container__register {
+    width: 100%;
+    padding: 10rem 3rem;
+  }
+.input_group{
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.input_group{
+  .login__input{
+    width: 89%;
+  }
+}
+  .login {
+    flex-direction: column-reverse;
+    width: 100%;
+    
+  }
+
+  .login__image_section {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .login__form_section {
+    width: 100%;
+  }
+
+  .login__form {
+    width: auto;
+  }
+  .logo_image{
+    padding: 0 ;
+  }
+
+  .login__input_showPassword {
+    width: 89%;
+  }
+
   //dashboard
   .nav__profile {
     gap: 0.625rem;
   }
+
 
   .nav__search {
     width: 12.5rem;
@@ -858,7 +906,46 @@ $cyan: #39CDCC;
 
 @media (min-width: 36rem) and (max-width: 47.9375rem) {
 
-  .personal_info {
-    background-color: red;
+  .container {
+    width: 100%;
+    padding: 5rem 5rem;
+  }
+
+  .container__register {
+    width: 100%;
+    padding: 10rem 3rem;
+  }
+.input_group{
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.input_group{
+  .login__input{
+    width: 89%;
+  }
+}
+  .login {
+    // flex-direction: column-reverse;
+    width: 100%;
+    
+  }
+
+  .login__image_section {
+    width: 100%;
+  }
+
+  .login__form_section {
+    width: 100%;
+  }
+
+  .login__form {
+    width: auto;
+  }
+  .logo_image{
+    padding: 0 ;
+  }
+
+  .login__input_showPassword {
+    width: 89%;
   }
 }
