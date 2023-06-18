@@ -12,14 +12,13 @@ export default interface UserInterface {
             status: string,
             isDeleted: false
         }[]
-
     }
 }
 
 export const allUsers = createApi({
     reducerPath: 'allUsers',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'http://localhost:4000',
+        baseUrl: process.env.NEXT_PUBLIC_BASEURL,
     }),
     endpoints: (builder) => ({
         users: builder.query<UserInterface[], void>({
@@ -27,5 +26,4 @@ export const allUsers = createApi({
         }),
     })
 })
-
 export const { useUsersQuery } = allUsers

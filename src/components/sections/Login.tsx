@@ -18,6 +18,7 @@ interface LoginPayload {
 }
 
 const Login = () => {
+    const baseUrl = process.env.NEXT_PUBLIC_BASEURL
     const [showPassword, setShowPassword] = useState<any>(false);
     const handleTogglePassword = () => {
         setShowPassword(!showPassword);
@@ -33,7 +34,7 @@ const Login = () => {
 
     const loginUser = async (data: LoginPayload) => {
         try {
-            const res = await axios.post("http://localhost:4000/login", data);
+            const res = await axios.post(`${baseUrl}/login`, data);
             toast.success("Logged successfully")
             localStorage.setItem("user", JSON.stringify(res.data.user));
             localStorage.setItem("token", res.data.accessToken);

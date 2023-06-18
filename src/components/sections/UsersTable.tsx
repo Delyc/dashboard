@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import User from "@/components/cards/User";
-import { Filter, OrganisationIcon } from "../ui/Svgs";
+import { Filter } from "../ui/Svgs";
 import styles from '../../styles/Home.module.scss'
 import Button from "../ui/Button";
 import FilterModal from "../ui/FilterModal";

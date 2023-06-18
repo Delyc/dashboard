@@ -23,6 +23,7 @@ interface RegisterPayload {
     username: string
 }
 const Register = () => {
+    const baseUrl = process.env.NEXT_PUBLIC_BASEURL
     const [showPassword, setShowPassword] = useState<any>(false);
     const handleTogglePassword = () => {
         setShowPassword(!showPassword);
@@ -49,7 +50,7 @@ const Register = () => {
     const router = useRouter()
     const createUser = async (data: RegisterPayload) => {
         try {
-            const res = axios.post("http://localhost:4000/users", data);
+            const res = axios.post(`${baseUrl}/users`, data);
             toast.success("Registration successful")
             router.push("/login")
         } catch (error) {

@@ -15,7 +15,6 @@ const UserRecordCount = ({ icon, text, count, background }: Props) => {
             </div>
             <p className={styles.user__title}>{text}</p>
             <p className={styles.user__count}>{count}</p>
-
         </article>
     );
 }

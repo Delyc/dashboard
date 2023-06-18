@@ -7,8 +7,7 @@ import { ActivateUser, Eye, ThreeDots, UserBlacklit } from "../ui/Svgs"
 import Button from "../ui/Button"
 import { toast } from "react-toastify"
 const User = ({ user,refetch }: any) => {
-
-    console.log("user", user)
+    const baseUrl = process.env.NEXT_PUBLIC_BASEURL
     const [show, setShow] = useState(false)
     const [status, setStatus] = useState(user.status)
     const editStatus = () => {
@@ -18,7 +17,7 @@ const User = ({ user,refetch }: any) => {
         console.log("alue", value)
         setStatus(value)
         toast.success("User status updated")
-        axios.patch(`http://localhost:4000/lendUsers/${user.id}`,
+        axios.patch(`${baseUrl}/lendUsers/${user.id}`,
             {
                 status: value,
             })

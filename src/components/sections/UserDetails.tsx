@@ -7,17 +7,17 @@ import { toast } from "react-toastify";
 import axios from "axios";
 
 const UserDetails = ({user, refetch}: any) => {
+    const baseUrl = process.env.NEXT_PUBLIC_BASEURL
     const [status, setStatus] = useState(user?.status)
     const userNavigation = ["General Deatils", "Documents", "Bank Details", "Loans", "Savings", "App and System"]
     const onChangeStatus = (value: string) => {
         console.log("alue", value)
         setStatus(value)
         toast.success("User status updated")
-        axios.patch(`http://localhost:4000/lendUsers/${user.id}`,
+        axios.patch(`${baseUrl}/lendUsers/${user.id}`,
             {
                 status: value,
             })
-            // refetch()
     }
     return (
         <div className={styles.user__details}>
