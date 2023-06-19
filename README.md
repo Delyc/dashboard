@@ -1,4 +1,4 @@
-[![UNITEST CI/CD](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/unitest.yml/badge.svg)](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/unitest.yml)  <a href="https://codeclimate.com/github/Delyc/lendsqr-fe-test/maintainability"><img src="https://api.codeclimate.com/v1/badges/611eeab10dc94101cc1d/maintainability" /></a>
+[![UNITEST CI/CD](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/unitest.yml/badge.svg)](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/unitest.yml) [![Deploy MkDocs to github pages](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/mkdocs.yml/badge.svg)](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/mkdocs.yml)
 
 # LEndsqr Frontend
 
@@ -11,6 +11,10 @@ This project has been deployed on Netlify. Check the link below to test the feat
 
 ## Documentation
 live documentation with navigation accessible at https://delyc.github.io/lendsqr-fe-test/
+## Running live documentation
+```
+mkdocs serve
+```
 
 ## Technologies
 - Next.js (React.js framework)
@@ -18,6 +22,7 @@ live documentation with navigation accessible at https://delyc.github.io/lendsqr
 - SCSS
 - Jest (for testing)
 - Axios
+- RTK query
 
 ## Features
 - Register: Admin can register a new user.
