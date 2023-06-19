@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export default interface UserInterface {
+    userStatus: string
     hasSavings: boolean
     hasSaving: boolean
     hasLoan: boolean

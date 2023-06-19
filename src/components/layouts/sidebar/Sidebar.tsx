@@ -110,13 +110,13 @@ const Sidebar = () => {
                 <Burger />
             </div>
           {showSidebar &&
-          <>
+          <div className={styles.sidebar__content}>
             <SidebarItem icon={<Briefcase />} text="switch organisatin" />
             <SidebarItem icon={<Home />} text="Dashboard" />
             <SidebarCategory category={customerItems} title={"customers"} />
             <SidebarCategory category={businessesItems} title={"businesses"} />
             <SidebarCategory category={settingsItems} title={"Settings"} />
-          </> 
+          </div> 
 
         }
         </section>

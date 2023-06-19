@@ -32,7 +32,7 @@ const Dashboard = () => {
         , [])
 
     const filteredArray = data
-        ?.filter((item) => item.status === 'active')
+        ?.filter((item) => item.userStatus === 'active')
 
         const userWithLoans = data
         ?.filter((item) => item.hasLoan === true)

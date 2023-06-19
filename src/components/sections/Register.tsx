@@ -16,7 +16,6 @@ import { toast } from 'react-toastify';
 interface RegisterPayload {
     organisationName: string,
     phone: string,
-    status: string,
     dateJoined: string,
     email: string,
     password: string,
@@ -62,8 +61,6 @@ const Register = () => {
         const regData = {
             organisationName: data.organisationName,
             phone: data.phone,
-            status: 'active',
-            isDeleted: false,
             email: data.email,
             username: data.username,
             password: data.password,

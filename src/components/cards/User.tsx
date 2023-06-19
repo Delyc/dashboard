@@ -9,7 +9,7 @@ import { toast } from "react-toastify"
 const User = ({ user,refetch }: any) => {
     const baseUrl = process.env.NEXT_PUBLIC_BASEURL
     const [show, setShow] = useState(false)
-    const [status, setStatus] = useState(user.status)
+    const [userStatus, setStatus] = useState(user.userStatus)
     const editStatus = () => {
         setShow(!show)
     }
@@ -19,7 +19,7 @@ const User = ({ user,refetch }: any) => {
         toast.success("User status updated")
         axios.patch(`${baseUrl}/lendUsers/${user.id}`,
             {
-                status: value,
+                userStatus: value,
             })
             refetch()
             setShow(false)
@@ -37,7 +37,7 @@ const User = ({ user,refetch }: any) => {
             <td className={styles.table__data}>{user.dateJoined}</td>
             <td  style={{ display: "flex", alignItems:"center" , gap: "5px", justifyContent: "space-between", position: "relative"}} className={styles.table__data}>
                
-               <p className={styles.table__data_status} style={{backgroundColor:status === 'active' ? "#39cd6317" : status === "pending" ? "#e9b30021": status === "inactivate" ? "#545f7d17" : "#e4033b23", color:status === 'active' ? "green" : status === "pending" ? "#E9B200": status === "inactivate" ? "#545F7D" : "#E4033B"}}>{status} </p> 
+               <p className={styles.table__data_status} style={{backgroundColor:userStatus === 'active' ? "#39cd6317" : userStatus === "pending" ? "#e9b30021": userStatus === "inactivate" ? "#545f7d17" : "#e4033b23", color:userStatus === 'active' ? "green" : userStatus === "pending" ? "#E9B200": userStatus === "inactivate" ? "#545F7D" : "#E4033B"}}>{userStatus} </p> 
                 {
                 <td>
                         {

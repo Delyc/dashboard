@@ -10,6 +10,7 @@ import axios from 'axios';
 const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
     const baseUrl = process.env.NEXT_PUBLIC_BASEURL
     const [select, setSelect] = useState<string | undefined>()
+    const [selectStatus, setSelectStatus] = useState<string | undefined>()
     const [email, setEmail] = useState()
     const [username, setUsername] = useState()
     const [dateJoined, setDateJoined] = useState()
@@ -18,8 +19,7 @@ const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
     const submitFiter = async (e: any) => {
         e.preventDefault()
         try {
-    const res = await axios.get(`${baseUrl}/lendUsers?isDelete=false${select ? `&organisationName=${select}` : ""}${email ? `&email=${email}` : ""}${username ? `&username=${username}` : ""}${phone ? `&phone=${phone}` : ""}${dateJoined ? `&dateJoined=${dateJoined}` : ""}${status ? `&status=${status}` : ""}`);
-           console.log("res", res)
+    const res = await axios.get(`${baseUrl}/lendUsers?isDelete=false${select ? `&organisationName=${select}` : ""}${email ? `&email=${email}` : ""}${username ? `&username=${username}` : ""}${phone ? `&phone=${phone}` : ""}${dateJoined ? `&dateJoined=${dateJoined}` : ""}${selectStatus ? `&userStatus=${selectStatus}` : ""}`);
     
     setUsers(res.data)
         } catch (error) {
@@ -42,16 +42,16 @@ const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
             label: 'active'
         },
         {
-            value: 'inactive',
-            label: 'inactive'
+            value: 'inactivate',
+            label: 'inactivate'
         },
         {
             value: 'pending',
             label: 'pending'
         },
         {
-            value: 'blacklisted',
-            label: 'blacklisted'
+            value: 'Blacklisted',
+            label: 'Blacklisted'
         },
     ]
     return (
@@ -78,7 +78,7 @@ const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
             </div>
             <div className={styles.filter__item}>
                 <p className={styles.filter__item_name}>Status</p>
-                <Select placeholder='Select' options={statusArray} />
+                <Select placeholder='Select' onChange={((data: any) => { setSelectStatus(data?.value) })} options={statusArray} />
             </div>
             <div className={styles.filter__buttons}>
                 <Button data-testid='reset-button' className={styles.reset_button} name='ting' text='Reset' onClick={() => submitReset()} />

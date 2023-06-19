@@ -292,6 +292,7 @@ $cyan: #39CDCC;
 .container_wrapper {
   display: flex;
   background-color: $background;
+  justify-content: space-between;
 }
 
 .sidebar {
@@ -299,9 +300,12 @@ $cyan: #39CDCC;
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
-  background-color: white;
-  width: 15%;
+  width: 12%;
+  // background-color: white;
   font-family: $font-family-work-sans;
+  overflow-y: scroll;
+  height: 100vh;
+  position: fixed;
 }
 
 .sidebar_section {
@@ -346,7 +350,9 @@ $cyan: #39CDCC;
   font-family: $font-family-work-sans;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem
+  justify-content: flex-end;
+  gap: 2.5rem;
+  margin-left: 11rem;
 }
 
 .users__title {
@@ -373,6 +379,10 @@ $cyan: #39CDCC;
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
+}
+
+.record:hover {
+  transform: scale3d(1.006, 1.006, 1)
 }
 
 .icon_circle {
@@ -442,6 +452,10 @@ $cyan: #39CDCC;
   font-size: 0.875rem;
   line-height: 1rem;
   color: $text-color;
+}
+
+.table__row:hover {
+  background-color: #61677715;
 }
 
 .table__data {
@@ -811,28 +825,30 @@ $cyan: #39CDCC;
   }
 }
 
-.table_menu{
+.table_menu {
   display: none;
 }
 
 //pagination
 
-.paginate{
+.paginate {
   display: flex;
   justify-content: space-between;
 }
-.paginate__pages{
+
+.paginate__pages {
   display: flex;
   gap: 0.9375rem;
 }
-.paginate__page{
+
+.paginate__page {
   border: none;
   background-color: $background;
   color: $text-color;
   font-size: 1rem;
 }
 
-.nextPrev{
+.nextPrev {
   background-color: #213F7D1A;
   border: none;
   width: 1.5rem;
@@ -844,7 +860,7 @@ $cyan: #39CDCC;
 //respoonsiveness
 
 @media (max-width: 36rem) {
-  .table_menu{
+  .table_menu {
     display: block;
   }
 
@@ -858,19 +874,22 @@ $cyan: #39CDCC;
     width: 100%;
     padding: 10rem 3rem;
   }
-.input_group{
-  flex-direction: column;
-  gap: 0.625rem;
-}
-.input_group{
-  .login__input{
-    width: 89%;
+
+  .input_group {
+    flex-direction: column;
+    gap: 0.625rem;
   }
-}
+
+  .input_group {
+    .login__input {
+      width: 89%;
+    }
+  }
+
   .login {
     flex-direction: column-reverse;
     width: 100%;
-    
+
   }
 
   .login__image_section {
@@ -885,8 +904,9 @@ $cyan: #39CDCC;
   .login__form {
     width: auto;
   }
-  .logo_image{
-    padding: 0 ;
+
+  .logo_image {
+    padding: 0;
   }
 
   .login__input_showPassword {
@@ -895,17 +915,25 @@ $cyan: #39CDCC;
 
   //dashboard
 
-  .container_wrapper{
-    // background-color: yellow;
+  .container_wrapper {
     width: 100%;
   }
-  .sidebar{
-    padding:  1.25rem;
+
+  .sidebar {
+    padding: 3rem 0;
     width: 50%;
     position: absolute;
-    background-color: white;
     z-index: 50;
   }
+
+  .sidebar__content {
+    background-color: white;
+    height: 100vh;
+    padding: 2rem 1rem;
+    overflow-y: scroll;
+    position: fixed;
+  }
+
   .nav__profile {
     gap: 0.625rem;
   }
@@ -915,64 +943,70 @@ $cyan: #39CDCC;
     width: 12.5rem;
   }
 
-  .users__records{
+  .users__records {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
 
   }
 
-  .user__title{
+  .user__title {
     font-size: 0.75rem;
   }
 
-  .user__count{
+  .user__count {
     font-size: 1.25rem;
   }
 
   .table__heading {
- display: flex;
- overflow-x: scroll;
- width: 15rem;
- padding: 0;
+    display: flex;
+    overflow-x: scroll;
+    width: 15rem;
+    padding: 0;
   }
 
-  .table__header{
+  .table__header {
     padding: 0 1rem;
   }
-  .table__data{
+
+  .table__data {
     display: flex;
     align-items: center;
     border: none;
-    
+
   }
 
-  .table__body{
+  .table__body {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #ddd;
   }
-  .table__row_mobile{
+
+  .table__row_mobile {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #ddd;
     margin-bottom: 2rem;
-padding : 0;
+    padding: 0;
   }
-  .record{
+
+  .record {
     padding: 15px;
   }
 
-  .users{
+  .users {
     padding: 1.875rem;
   }
-  .scroll__table{
+
+  .scroll__table {
     overflow-x: auto;
 
   }
-  .table{
+
+  .table {
     overflow: scroll;
     width: 10rem;
   }
+
   .personal_info {
     display: flex;
     flex-direction: column;
@@ -999,14 +1033,14 @@ padding : 0;
     overflow-y: scroll;
   }
 
-.user__actions{
-  flex-direction: column;
-}
+  .user__actions {
+    flex-direction: column;
+  }
 }
 
 
 @media (min-width: 36rem) and (max-width: 47.9375rem) {
-  .table_menu{
+  .table_menu {
     display: block;
   }
 
@@ -1019,19 +1053,22 @@ padding : 0;
     width: 100%;
     padding: 10rem 3rem;
   }
-.input_group{
-  flex-direction: column;
-  gap: 0.625rem;
-}
-.input_group{
-  .login__input{
-    width: 89%;
+
+  .input_group {
+    flex-direction: column;
+    gap: 0.625rem;
   }
-}
+
+  .input_group {
+    .login__input {
+      width: 89%;
+    }
+  }
+
   .login {
     // flex-direction: column-reverse;
     width: 100%;
-    
+
   }
 
   .login__image_section {
@@ -1045,8 +1082,9 @@ padding : 0;
   .login__form {
     width: auto;
   }
-  .logo_image{
-    padding: 0 ;
+
+  .logo_image {
+    padding: 0;
   }
 
   .login__input_showPassword {
@@ -1055,52 +1093,55 @@ padding : 0;
 }
 
 
-@media (min-width: 768px) and (max-width: 991px) { 
-  .scroll__table{
+@media (min-width: 768px) and (max-width: 991px) {
+  .scroll__table {
     overflow-x: auto;
   }
-  .users__records{
+
+  .users__records {
     grid-template-columns: repeat(2, 1fr);
 
   }
+
   .table__heading {
     display: flex;
     overflow-x: scroll;
     width: 20rem;
     padding: 0;
-     }
-   
-     .table__header{
-       padding: 0 1rem;
-     }
-     .table__data{
-       display: flex;
-       align-items: center;
-       border: none;
-       
-     }
-   
-     .table__body{
-       display: flex;
-       flex-direction: column;
-       border-bottom: 1px solid #ddd;
-     }
-     .table__row_mobile{
-       display: flex;
-       flex-direction: column;
-       border-bottom: 1px solid #ddd;
-       margin-bottom: 2rem;
-   padding : 0;
-     }
-  .record{
   }
- }
 
- @media (min-width: 992px) and (max-width: 1199px) 
- { 
-  .scroll__table{
+  .table__header {
+    padding: 0 1rem;
+  }
+
+  .table__data {
+    display: flex;
+    align-items: center;
+    border: none;
+
+  }
+
+  .table__body {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .table__row_mobile {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+
+  .record {}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .scroll__table {
     width: 45rem;
     overflow-x: auto;
   }
 
-  }
+}
