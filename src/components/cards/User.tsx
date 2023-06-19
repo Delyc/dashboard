@@ -35,7 +35,7 @@ const User = ({ user,refetch }: any) => {
             <td className={styles.table__data}>{user.email}</td>
             <td className={styles.table__data}>{user.phone}</td>
             <td className={styles.table__data}>{user.dateJoined}</td>
-            <td  style={{ display: "flex", gap: "5px", justifyContent: "space-between", position: "relative"}} className={styles.table__data}>
+            <td  style={{ display: "flex", alignItems:"center" , gap: "5px", justifyContent: "space-between", position: "relative"}} className={styles.table__data}>
                
                <p className={styles.table__data_status} style={{backgroundColor:status === 'active' ? "#39cd6317" : status === "pending" ? "#e9b30021": status === "inactivate" ? "#545f7d17" : "#e4033b23", color:status === 'active' ? "green" : status === "pending" ? "#E9B200": status === "inactivate" ? "#545F7D" : "#E4033B"}}>{status} </p> 
                 {
@@ -46,7 +46,7 @@ const User = ({ user,refetch }: any) => {
                             }}>
 
                                 <Link className={styles.options__link} href={`/user/${user.id}`}><Eye /> View Deatils</Link>
-                                <button className={styles.options__button} onClick={(() => onChangeStatus("Blacklist User"))}> <UserBlacklit /> Blacklist User</button>
+                                <button className={styles.options__button} onClick={(() => onChangeStatus("Blacklisted"))}> <UserBlacklit /> Blacklist User</button>
                                 <button className={styles.options__button} onClick={(() => onChangeStatus(status === "active" ? "inactivate" : "active"))}><ActivateUser /> {status === "active" ? "inactivate" : "active"}</button>
                             </div>
                         }

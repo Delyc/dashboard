@@ -18,7 +18,7 @@ const FilterModal = ({ setFilterModal, setUsers, organisation }: any) => {
     const submitFiter = async (e: any) => {
         e.preventDefault()
         try {
-    const res = await axios.get(`${baseUrl}?isDelete=false${select ? `&organisationName=${select}` : ""}${email ? `&email=${email}` : ""}${username ? `&username=${username}` : ""}${phone ? `&phone=${phone}` : ""}${dateJoined ? `&dateJoined=${dateJoined}` : ""}${status ? `&status=${status}` : ""}`);
+    const res = await axios.get(`${baseUrl}/lendUsers?isDelete=false${select ? `&organisationName=${select}` : ""}${email ? `&email=${email}` : ""}${username ? `&username=${username}` : ""}${phone ? `&phone=${phone}` : ""}${dateJoined ? `&dateJoined=${dateJoined}` : ""}${status ? `&status=${status}` : ""}`);
            console.log("res", res)
     
     setUsers(res.data)

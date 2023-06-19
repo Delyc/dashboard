@@ -9,9 +9,11 @@ import Pagination from "../ui/Pagination";
 const UsersTable = () => {
   const [filterModal, setFilterModal] = useState(false);
   const { data, isLoading, isError, refetch } = useUsersQuery();
+
+  console.log("daa", data)
   const [users, setUsers] = useState(data);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 2; // Number of users to display per page
+  const itemsPerPage = 100; // Number of users to display per page
 
   useEffect(() => {
     setUsers(data);

@@ -12,13 +12,7 @@ import { getLocalStorageItem } from "@/helpers/localStorage";
 const Dashboard = () => {
     const { data } = useUsersQuery()
     const router = useRouter()
-
-
-    // const token = localStorage.getItem("token");
-
-
-const token = getLocalStorageItem('token');
-
+    const token = getLocalStorageItem('token');
     const userJson = getLocalStorageItem("user");
     const user = userJson ? JSON.parse(userJson) : null;
 
@@ -40,6 +34,12 @@ const token = getLocalStorageItem('token');
     const filteredArray = data
         ?.filter((item) => item.status === 'active')
 
+        const userWithLoans = data
+        ?.filter((item) => item.hasLoan === true)
+
+        const userWithSavings = data
+        ?.filter((item) => item.hasSavings === true)
+
     const userRecords = [
         {
             icon: <TwoProfilesIcon />,
@@ -57,13 +57,13 @@ const token = getLocalStorageItem('token');
         {
             icon: <DocumentIcon />,
             text: "Users with Loans",
-            values: 2453,
+            values: `${userWithLoans?.length}`,
             background: "#f55f4417"
         },
         {
             icon: <DatabaseIcon />,
             text: "Users with Savings",
-            values: 2453,
+            values: `${userWithSavings?.length}`,
             background: "#ff336617"
         },
     ]
