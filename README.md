@@ -1,13 +1,13 @@
 [![UNITEST CI/CD](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/unitest.yml/badge.svg)](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/unitest.yml) [![Deploy MkDocs to github pages](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/mkdocs.yml/badge.svg)](https://github.com/Delyc/lendsqr-fe-test/actions/workflows/mkdocs.yml)
 
-# LEndsqr Frontend
+# Frontend
 
 ## Introduction
 This is a frontend application that allows admin to register, login, and view a dashboard that displays all users and their individual profiles.
 
 ## Deployment
 This project has been deployed on Netlify. Check the link below to test the features:
-- [LEndsqr Frontend](https://delyce-lendsqr-fe-test.netlify.app/)
+- [Frontend](https://delyce-lendsqr-fe-test.netlify.app/)
 
 ## Documentation
 live documentation with navigation accessible at https://delyc.github.io/lendsqr-fe-test/
